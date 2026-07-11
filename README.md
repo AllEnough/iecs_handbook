@@ -1,16 +1,45 @@
-# React + Vite
+# IECS 新生手冊
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+逢甲大學資訊工程學系 IECS 新生手冊單頁式網站，使用 Vite、React、Tailwind CSS 與 lucide-react 製作。
 
-Currently, two official plugins are available:
+線上網站：
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://iecs-handbook.vercel.app/
 
-## React Compiler
+## 功能內容
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 首頁 Hero 與任務導覽
+- Mission 01：認識系學會
+- Mission 02：迎新宿營
+- Mission 03：系會費與會員福利
+- Mission 04：系服與周邊
+- Final Mission：聯絡我們與常見問題
+- Extra：活動預告、學生福利、逢甲小知識與校園地圖
 
-## Expanding the Oxlint configuration
+## 開發指令
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+## 檢查與建置
+
+```bash
+npm run lint
+npm run build
+```
+
+## 部署
+
+此專案部署在 Vercel。Vercel build command 使用：
+
+```bash
+npm run build
+```
+
+輸出資料夾：
+
+```bash
+dist
+```
