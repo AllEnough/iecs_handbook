@@ -1,4 +1,5 @@
-import { AtSign, CalendarDays, ImagePlus, MapPin } from 'lucide-react'
+import { AtSign, CalendarDays, MapPin } from 'lucide-react'
+import campPhoto from '../assets/handbook/camp.jpg'
 
 function CampSection() {
   return (
@@ -6,14 +7,11 @@ function CampSection() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-10 md:p-8">
           <div className="order-2 overflow-hidden rounded-md border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b] md:order-1">
-            <div className="flex aspect-video items-center justify-center bg-gray-200 text-zinc-500">
-              <div className="flex flex-col items-center gap-3 text-center">
-                <ImagePlus size={42} strokeWidth={2.5} />
-                <span className="text-sm font-black md:text-base">
-                  迎新宿營照片預留區
-                </span>
-              </div>
-            </div>
+            <img
+              src={campPhoto}
+              alt="迎新宿營活動合照"
+              className="aspect-video h-full w-full object-cover"
+            />
           </div>
 
           <div className="order-1 md:order-2">

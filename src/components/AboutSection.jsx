@@ -1,4 +1,5 @@
-import { Building2, ImagePlus, UsersRound } from 'lucide-react'
+import { Building2, UsersRound } from 'lucide-react'
+import memberPhoto from '../assets/handbook/members.jpg'
 
 function AboutSection() {
   return (
@@ -26,14 +27,11 @@ function AboutSection() {
           </div>
 
           <div className="overflow-hidden rounded-md border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b]">
-            <div className="flex aspect-video items-center justify-center bg-gray-200 text-zinc-500">
-              <div className="flex flex-col items-center gap-3 text-center">
-                <ImagePlus size={42} strokeWidth={2.5} />
-                <span className="text-sm font-black md:text-base">
-                  系學會合照預留區
-                </span>
-              </div>
-            </div>
+            <img
+              src={memberPhoto}
+              alt="系學會成員合照"
+              className="aspect-video h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>

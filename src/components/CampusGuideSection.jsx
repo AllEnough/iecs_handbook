@@ -1,4 +1,6 @@
-import { ImagePlus, Map, School, Sparkles } from 'lucide-react'
+import { Map, School, Sparkles } from 'lucide-react'
+import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
+import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
 
 const abbreviations = [
   ['忠', '忠勤樓'],
@@ -70,14 +72,14 @@ function CampusGuideSection() {
           </div>
 
           <div className="mt-8 overflow-hidden rounded-lg border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b]">
-            <div className="flex aspect-video min-h-64 items-center justify-center bg-gray-200 text-zinc-500">
-              <div className="flex flex-col items-center gap-3 text-center">
-                <ImagePlus size={48} strokeWidth={2.5} />
-                <span className="text-base font-black md:text-lg">
-                  逢甲大學校區平面圖預留區
-                </span>
-              </div>
-            </div>
+            <picture>
+              <source media="(min-width: 768px)" srcSet={campusMapLandscape} />
+              <img
+                src={campusMapPortrait}
+                alt="逢甲大學校區平面圖"
+                className="max-h-[720px] w-full bg-white object-contain"
+              />
+            </picture>
           </div>
         </div>
       </div>

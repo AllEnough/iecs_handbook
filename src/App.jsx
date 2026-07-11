@@ -7,6 +7,7 @@ import ContactSection from './components/ContactSection'
 import FeeSection from './components/FeeSection'
 import MerchSection from './components/MerchSection'
 import ScheduleSection from './components/ScheduleSection'
+import iecsLogo from './assets/handbook/iecs-logo.png'
 
 const navItems = [
   { label: '認識系學會', href: '#student-association' },
@@ -27,8 +28,12 @@ function App() {
             href="#top"
             className="flex items-center gap-3 text-lg font-black tracking-wide"
           >
-            <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-zinc-950 text-sm text-white shadow-[3px_3px_0_#facc15]">
-              IE
+            <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full border-2 border-zinc-950 bg-zinc-950 shadow-[3px_3px_0_#facc15]">
+              <img
+                src={iecsLogo}
+                alt="IECS logo"
+                className="h-full w-full object-cover"
+              />
             </span>
             IECS 新生手冊
           </a>

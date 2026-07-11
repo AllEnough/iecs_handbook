@@ -1,4 +1,5 @@
 import { CalendarClock, Gift, PartyPopper, Star } from 'lucide-react'
+import infoNightPhoto from '../assets/handbook/info-night.jpg'
 
 const events = [
   {
@@ -66,6 +67,14 @@ function ScheduleSection() {
             </div>
 
             <div className="rounded-lg border-4 border-zinc-950 bg-[#ffe993] p-5 shadow-[5px_5px_0_#18181b]">
+              <div className="mb-5 overflow-hidden rounded-md border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
+                <img
+                  src={infoNightPhoto}
+                  alt="資訊之夜活動合照"
+                  className="aspect-video h-full w-full object-cover"
+                />
+              </div>
+
               <h3 className="flex items-center gap-2 text-2xl font-black">
                 <Gift size={26} />
                 學生福利
