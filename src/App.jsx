@@ -7,6 +7,7 @@ import ContactSection from './components/ContactSection'
 import FeeSection from './components/FeeSection'
 import MerchSection from './components/MerchSection'
 import ScheduleSection from './components/ScheduleSection'
+import TransportSection from './components/TransportSection'
 import iecsLogo from './assets/handbook/iecs-logo.png'
 
 const navItems = [
@@ -141,6 +142,7 @@ function App() {
       <MerchSection />
       <ContactSection />
       <ScheduleSection />
+      <TransportSection />
       <CampusGuideSection />
     </main>
   )

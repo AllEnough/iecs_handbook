@@ -7,6 +7,7 @@ const plans = [
     price: '敬請期待',
     description: '系會費一年方案 + 迎新宿營',
     highlight: false,
+    tag: '🔥 即將截止',
   },
   {
     name: '四年方案',
@@ -67,6 +68,11 @@ function FeeSection() {
                       推薦
                     </span>
                   )}
+                  {plan.tag && (
+                    <span className="shrink-0 rounded-full border-2 border-zinc-950 bg-red-100 px-3 py-1 text-xs font-black text-red-600">
+                      {plan.tag}
+                    </span>
+                  )}
                 </div>
 
                 <p className="mt-5 text-3xl font-black">{plan.price}</p>
@@ -78,21 +84,29 @@ function FeeSection() {
           </div>
 
           <div className="mt-8 grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
-              <h3 className="flex items-center gap-2 text-xl font-black">
-                <Wallet size={22} />
-                繳費資訊
-              </h3>
-              <div className="mt-4 space-y-3 text-base font-bold leading-7 text-zinc-800">
-                <p className="flex items-center gap-2">
-                  <ReceiptText size={20} />
-                  繳費方式：現金 or 匯款
-                </p>
-                <p className="flex items-center gap-2">
-                  <MapPin size={20} />
-                  現場繳費地點：資電 B30
-                </p>
+            <div className="flex flex-col justify-between rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+              <div>
+                <h3 className="flex items-center gap-2 text-xl font-black">
+                  <Wallet size={22} />
+                  繳費資訊
+                </h3>
+                <div className="mt-4 space-y-3 text-base font-bold leading-7 text-zinc-800">
+                  <p className="flex items-center gap-2">
+                    <ReceiptText size={20} />
+                    繳費方式：現金 or 匯款
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <MapPin size={20} />
+                    現場繳費地點：資電 B30
+                  </p>
+                </div>
               </div>
+              <a
+                href="#contact"
+                className="mt-6 flex items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
+              >
+                前往聯絡我們
+              </a>
             </div>
 
             <div className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">

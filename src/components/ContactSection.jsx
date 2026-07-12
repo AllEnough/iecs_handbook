@@ -16,6 +16,7 @@ const contacts = [
     icon: AtSign,
     title: 'Instagram',
     detail: '@fcu_iecs',
+    href: 'https://instagram.com/fcu_iecs',
   },
 ]
 
@@ -68,9 +69,20 @@ function ContactSection() {
                       </div>
                       <div>
                         <h3 className="text-lg font-black">{contact.title}</h3>
-                        <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
-                          {contact.detail}
-                        </p>
+                        {contact.href ? (
+                          <a
+                            href={contact.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1 block text-base font-bold leading-7 text-blue-600 transition hover:underline"
+                          >
+                            {contact.detail}
+                          </a>
+                        ) : (
+                          <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
+                            {contact.detail}
+                          </p>
+                        )}
                         {contact.subDetail && (
                           <p className="mt-1 break-words text-sm font-medium leading-6 text-zinc-600">
                             {contact.subDetail}
@@ -108,14 +120,20 @@ function ContactSection() {
           <div className="mt-8 flex flex-col gap-3 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-white shadow-[5px_5px_0_#facc15] md:flex-row md:items-center md:justify-between">
             <p className="text-2xl font-black">歡迎加入逢甲資訊系 IECS</p>
             <div className="flex flex-wrap gap-3 text-sm font-black">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-zinc-950">
+              <a
+                href="tel:0424517250"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-zinc-950 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#facc15]"
+              >
                 <Phone size={18} />
                 #3704
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-zinc-950">
+              </a>
+              <a
+                href="mailto:wucy@o365.fcu.edu.tw"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-zinc-950 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#facc15]"
+              >
                 <Mail size={18} />
                 wucy@o365.fcu.edu.tw
-              </span>
+              </a>
             </div>
           </div>
         </div>

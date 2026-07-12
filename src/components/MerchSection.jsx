@@ -27,7 +27,16 @@ function MerchSection() {
             </h2>
 
             <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
-              今年系學會將推出屬於 IECS 的系服與周邊，相關設計、價格、尺寸表與訂購方式，會在確認後公布於系學會 IG 與新生群。想第一時間看到最新資訊，記得追蹤 @fcu_iecs。
+              今年系學會將推出屬於 IECS 的系服與周邊，相關設計、價格、尺寸表與訂購方式，會在確認後公布於系學會 IG 與新生群。想第一時間看到最新資訊，記得追蹤{' '}
+              <a
+                href="https://instagram.com/fcu_iecs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 transition hover:underline"
+              >
+                @fcu_iecs
+              </a>
+              。
             </p>
 
             <div className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">

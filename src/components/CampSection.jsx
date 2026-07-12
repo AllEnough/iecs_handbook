@@ -39,7 +39,15 @@ function CampSection() {
               </div>
               <div className="inline-flex items-center gap-2 rounded-full border-2 border-zinc-950 bg-white px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
                 <AtSign size={20} />
-                活動 IG：@115.fcu.7camping
+                活動 IG：
+                <a
+                  href="https://instagram.com/115.fcu.7camping"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 transition hover:underline"
+                >
+                  @115.fcu.7camping
+                </a>
               </div>
             </div>
           </div>
