@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronRight, Code2, Menu, Sparkles, X } from 'lucide-react'
+import { ArrowUp, ChevronRight, Code2, Menu, Sparkles, X } from 'lucide-react'
 import AboutSection from './components/AboutSection'
 import CampusGuideSection from './components/CampusGuideSection'
 import CampSection from './components/CampSection'
@@ -125,12 +125,24 @@ function App() {
             <h2 className="text-2xl font-black">快速前往</h2>
 
             <ul className="mt-5 space-y-3 text-base font-bold leading-7">
-              <li>Mission 01 | 認識系學會</li>
-              <li>Mission 02 | 解鎖迎新宿營</li>
-              <li>Mission 03 | 系會費與會員福利</li>
-              <li>Mission 04 | 系服與周邊</li>
-              <li>Final Mission | 聯絡我們</li>
-              <li>Extra | 活動預告與逢甲小知識</li>
+              <li>
+                <a href="#student-association" className="transition hover:text-blue-600 hover:underline">Mission 01 | 認識系學會</a>
+              </li>
+              <li>
+                <a href="#camp" className="transition hover:text-blue-600 hover:underline">Mission 02 | 解鎖迎新宿營</a>
+              </li>
+              <li>
+                <a href="#fee" className="transition hover:text-blue-600 hover:underline">Mission 03 | 系會費與會員福利</a>
+              </li>
+              <li>
+                <a href="#shirt" className="transition hover:text-blue-600 hover:underline">Mission 04 | 系服與周邊</a>
+              </li>
+              <li>
+                <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
+              </li>
+              <li>
+                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動預告與逢甲小知識</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -144,6 +156,14 @@ function App() {
       <ScheduleSection />
       <TransportSection />
       <CampusGuideSection />
+
+      <a
+        href="#top"
+        className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full border-4 border-zinc-950 bg-[#ffe993] text-zinc-950 shadow-[4px_4px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[6px_6px_0_#18181b] md:bottom-10 md:right-10"
+        aria-label="回到頂部"
+      >
+        <ArrowUp size={28} strokeWidth={3} />
+      </a>
     </main>
   )
 }
