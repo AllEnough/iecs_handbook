@@ -1,4 +1,4 @@
-import { AtSign, Building2, HelpCircle, Mail, MapPin, Phone, UserRound } from 'lucide-react'
+import { AtSign, Building2, HelpCircle, MapPin, UserRound } from 'lucide-react'
 
 const contacts = [
   {
@@ -117,24 +117,8 @@ function ContactSection() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-white shadow-[5px_5px_0_#facc15] md:flex-row md:items-center md:justify-between">
-            <p className="text-2xl font-black">歡迎加入逢甲資訊系 IECS</p>
-            <div className="flex flex-wrap gap-3 text-sm font-black">
-              <a
-                href="tel:0424517250"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-zinc-950 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#facc15]"
-              >
-                <Phone size={18} />
-                #3704
-              </a>
-              <a
-                href="mailto:wucy@o365.fcu.edu.tw"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-zinc-950 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#facc15]"
-              >
-                <Mail size={18} />
-                wucy@o365.fcu.edu.tw
-              </a>
-            </div>
+          <div className="mt-8 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-center text-white shadow-[5px_5px_0_#facc15] md:p-6">
+            <p className="text-2xl font-black md:text-3xl">歡迎加入逢甲資訊系 IECS</p>
           </div>
         </div>
       </div>

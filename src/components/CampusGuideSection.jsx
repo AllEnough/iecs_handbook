@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Map, School, Sparkles, X, MapPin, Image as ImageIcon } from 'lucide-react'
+import { Map, School, Sparkles, X } from 'lucide-react'
 import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
 import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
 
@@ -75,37 +75,15 @@ function CampusGuideSection() {
             </div>
           </div>
 
-          <div className="mt-12">
-            <div className="overflow-hidden rounded-t-lg border-4 border-b-0 border-zinc-950 bg-gray-200">
-              <picture>
-                <source media="(min-width: 768px)" srcSet={campusMapLandscape} />
-                <img
-                  src={campusMapPortrait}
-                  alt="逢甲大學校區平面圖"
-                  className="max-h-[720px] w-full bg-white object-contain"
-                />
-              </picture>
-            </div>
-            <div className="grid gap-3 rounded-b-lg border-4 border-zinc-950 bg-white p-4 shadow-[6px_6px_0_#18181b] sm:grid-cols-2">
-              <a
-                href={campusMapLandscape}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-zinc-950 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#facc15]"
-              >
-                <ImageIcon size={18} />
-                點擊查看高畫質大圖
-              </a>
-              <a
-                href="https://maps.app.goo.gl/r6m8R58bE1s8R1r48"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#e8f4ff] py-3 text-sm font-black text-zinc-950 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#18181b]"
-              >
-                <MapPin size={18} />
-                開啟 Google Maps 導航
-              </a>
-            </div>
+          <div className="mt-12 overflow-hidden rounded-lg border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b]">
+            <picture>
+              <source media="(min-width: 768px)" srcSet={campusMapLandscape} />
+              <img
+                src={campusMapPortrait}
+                alt="逢甲大學校區平面圖"
+                className="max-h-[720px] w-full bg-white object-contain"
+              />
+            </picture>
           </div>
         </div>
       </div>
