@@ -69,6 +69,19 @@ function TransportSection() {
               </div>
             </article>
           </div>
+
+          <div className="mt-8 overflow-hidden rounded-lg border-4 border-zinc-950 shadow-[6px_6px_0_#18181b]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.1197824128527!2d120.64333631536762!3d24.18115687864858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346916212e52b861%3A0x7d6f51df170eec13!2z6YCi55Sy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1714545564852!5m2!1szh-TW!2stw"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="逢甲大學地圖"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

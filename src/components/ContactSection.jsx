@@ -1,4 +1,4 @@
-import { AtSign, Building2, HelpCircle, MapPin, UserRound } from 'lucide-react'
+import { AtSign, Building2, HelpCircle, MapPin, UserRound, Rocket, Code } from 'lucide-react'
 
 const contacts = [
   {
@@ -119,8 +119,10 @@ function ContactSection() {
             </div>
           </div>
 
-          <div className="mt-8 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-center text-white shadow-[5px_5px_0_#facc15] md:p-6">
+          <div className="mt-8 flex items-center justify-center gap-3 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-center text-white shadow-[5px_5px_0_#facc15] md:p-6">
+            <Code size={28} className="hidden shrink-0 text-blue-400 sm:block" />
             <p className="text-2xl font-black md:text-3xl">歡迎加入逢甲資訊系 IECS</p>
+            <Rocket size={28} className="hidden shrink-0 text-yellow-400 sm:block" />
           </div>
         </div>
       </div>
