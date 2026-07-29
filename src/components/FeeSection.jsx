@@ -26,8 +26,8 @@ const plans = [
 ]
 
 const benefits = [
-  '會費期限內所有系上舉辦的活動皆能享有優惠價格！',
-  '會費期限內的資訊之夜可獲得會員專屬摸彩券！',
+  '會員期限內所有系上舉辦的活動皆能享有優惠價格！',
+  '會員期限內一年一次的資訊之夜可獲得會員專屬摸彩券！',
 ]
 
 function FeeSection() {
@@ -110,7 +110,7 @@ function FeeSection() {
             </div>
 
             <div className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
-              <h3 className="text-xl font-black">會員福利</h3>
+              <h3 className="text-xl font-black">會員權利</h3>
               <ol className="mt-4 space-y-3">
                 {benefits.map((benefit) => (
                   <li

@@ -81,8 +81,7 @@ function ScheduleSection() {
               </h3>
 
               <p className="mt-5 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
-                系學會與逢甲 Straight A 特約商店合作：只要是資訊工程學系的學生，都可以以 8 折的優惠購買所有的副廠商品
-                <span className="font-black">（音頻與軟體除外）</span>
+                系學會與逢甲Straight A特約商店合作：只要是逢甲資訊工程學系的學生在115學年度，都可以以8折的優惠購買所有的副廠商品（音頻與軟體商品除外），除此之外還有不定時團購及每月官方線上課程（價值500元）供有興趣的同學免費報名！
               </p>
             </div>
           </div>

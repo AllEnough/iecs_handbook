@@ -4,22 +4,22 @@ import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
 import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
 
 const abbreviations = [
-  ['忠', '忠勤樓'],
-  ['商', '商學大樓'],
-  ['工', '工學館'],
-  ['人', '人言大樓'],
-  ['建', '建築館'],
-  ['土', '土木水利館'],
-  ['學', '學思樓'],
-  ['紀', '丘逢甲紀念館'],
-  ['育', '育樂館'],
-  ['人社', '人文社會館'],
-  ['圖', '圖書館'],
-  ['資電', '資訊電機館'],
-  ['語', '語文大樓'],
-  ['電通', '電子通訊館'],
-  ['理', '理學大樓'],
-  ['科航', '科學與航太館'],
+  { shortName: '忠', fullName: '忠勤樓' },
+  { shortName: '商', fullName: '商學大樓' },
+  { shortName: '工', fullName: '工學館' },
+  { shortName: '人', fullName: '人言大樓', desc: '逢甲最高的建築，部分通識課/中文課/英文課的地點，人言一樓及樓下有座位區供吃飯休息，但是人言不可以睡覺喔' },
+  { shortName: '建', fullName: '建築館' },
+  { shortName: '土', fullName: '土木水利館' },
+  { shortName: '學', fullName: '學思樓' },
+  { shortName: '紀', fullName: '丘逢甲紀念館' },
+  { shortName: '育', fullName: '育樂館' },
+  { shortName: '人社', fullName: '人文社會館' },
+  { shortName: '圖', fullName: '圖書館', desc: '一樓有座位區可以睡覺，但不能帶食物及飲料喔，樓上也有讀書的地方' },
+  { shortName: '資電', fullName: '資訊電機館', desc: '資訊系學生在逢甲最常去的建築，這邊有各位接下來四年大部分必選修科目的教室喔，資訊系的系辦公室就在資電二樓' },
+  { shortName: '語', fullName: '語文大樓' },
+  { shortName: '電通', fullName: '電子通訊館' },
+  { shortName: '理', fullName: '理學大樓' },
+  { shortName: '科航', fullName: '科學與航太館' },
 ]
 
 function CampusGuideSection() {
@@ -57,20 +57,34 @@ function CampusGuideSection() {
               </h3>
 
               <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-                {abbreviations.map(([shortName, fullName]) => (
-                  <button
-                    key={`${shortName}-${fullName}`}
-                    onClick={() => setSelectedBuilding({ shortName, fullName })}
-                    className="flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:bg-[#ffe993] hover:shadow-[5px_5px_0_#18181b]"
-                  >
-                    <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
-                      {shortName}
-                    </span>
-                    <span className="text-sm font-bold leading-5 text-zinc-800">
-                      {fullName}
-                    </span>
-                  </button>
-                ))}
+                {abbreviations.map((item) =>
+                  item.desc ? (
+                    <button
+                      key={`${item.shortName}-${item.fullName}`}
+                      onClick={() => setSelectedBuilding(item)}
+                      className="flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:bg-[#ffe993] hover:shadow-[5px_5px_0_#18181b]"
+                    >
+                      <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
+                        {item.shortName}
+                      </span>
+                      <span className="text-sm font-bold leading-5 text-zinc-800">
+                        {item.fullName}
+                      </span>
+                    </button>
+                  ) : (
+                    <div
+                      key={`${item.shortName}-${item.fullName}`}
+                      className="flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 shadow-[3px_3px_0_#18181b]"
+                    >
+                      <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
+                        {item.shortName}
+                      </span>
+                      <span className="text-sm font-bold leading-5 text-zinc-800">
+                        {item.fullName}
+                      </span>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -104,11 +118,8 @@ function CampusGuideSection() {
               </button>
             </div>
             <div className="p-5">
-              <div className="flex aspect-video w-full items-center justify-center rounded-md border-2 border-zinc-950 bg-gray-200">
-                <span className="text-sm font-bold text-zinc-500">照片準備中...</span>
-              </div>
-              <p className="mt-4 text-base font-bold leading-7 text-zinc-800">
-                這是{selectedBuilding.fullName}的簡介。我們將在日後補充更多關於這棟建築物的實景照片與相關資訊！
+              <p className="text-base font-bold leading-7 text-zinc-800">
+                {selectedBuilding.desc}
               </p>
             </div>
           </div>

@@ -4,7 +4,8 @@ const contacts = [
   {
     icon: Building2,
     title: '辦公室',
-    detail: '逢甲大學資訊電機館 B30',
+    detail: '系主任：張哲誠',
+    subDetail: '04-24517250 #3764 / checchang@fcu.edu.tw',
   },
   {
     icon: UserRound,
@@ -14,9 +15,10 @@ const contacts = [
   },
   {
     icon: AtSign,
-    title: 'Instagram',
-    detail: '@fcu_iecs',
+    title: '系學會',
+    detail: 'ig：@fcu_iecs',
     href: 'https://instagram.com/fcu_iecs',
+    subDetail: '辦公室：逢甲大學資訊電機館 B30',
   },
 ]
 
@@ -45,8 +47,8 @@ function ContactSection() {
                 Final Mission
               </p>
 
-              <h2 className="text-3xl font-black leading-tight md:text-5xl">
-                Final Mission | 聯絡我們
+              <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-5xl">
+                Final Mission | <span className="inline-block">聯絡我們</span>
               </h2>
 
               <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
