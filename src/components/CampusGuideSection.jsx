@@ -61,34 +61,23 @@ function CampusGuideSection() {
               </h3>
 
               <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-                {abbreviations.map((item) =>
-                  item.desc ? (
-                    <button
-                      key={`${item.shortName}-${item.fullName}`}
-                      onClick={() => setSelectedBuilding(item)}
-                      className="flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] p-3 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:bg-[#facc15] hover:shadow-[5px_5px_0_#18181b]"
-                    >
-                      <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
-                        {item.shortName}
-                      </span>
-                      <span className="text-sm font-bold leading-5 text-zinc-800">
-                        {item.fullName}
-                      </span>
-                    </button>
-                  ) : (
-                    <div
-                      key={`${item.shortName}-${item.fullName}`}
-                      className="flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 shadow-[3px_3px_0_#18181b]"
-                    >
-                      <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
-                        {item.shortName}
-                      </span>
-                      <span className="text-sm font-bold leading-5 text-zinc-800">
-                        {item.fullName}
-                      </span>
-                    </div>
-                  )
-                )}
+                {abbreviations.map((item) => (
+                  <button
+                    key={`${item.shortName}-${item.fullName}`}
+                    onClick={() => setSelectedBuilding({
+                      ...item,
+                      desc: item.desc || `這是${item.fullName}。學長姐將在日後為你補充更多關於這棟建築物的介紹！`
+                    })}
+                    className="flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:bg-[#ffe993] hover:shadow-[5px_5px_0_#18181b]"
+                  >
+                    <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
+                      {item.shortName}
+                    </span>
+                    <span className="text-sm font-bold leading-5 text-zinc-800">
+                      {item.fullName}
+                    </span>
+                  </button>
+                ))}
               </div>
             </div>
           </div>
