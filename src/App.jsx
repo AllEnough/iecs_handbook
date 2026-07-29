@@ -5,7 +5,6 @@ import CampusGuideSection from './components/CampusGuideSection'
 import CampSection from './components/CampSection'
 import ContactSection from './components/ContactSection'
 import FeeSection from './components/FeeSection'
-import MerchSection from './components/MerchSection'
 import ScheduleSection from './components/ScheduleSection'
 import TransportSection from './components/TransportSection'
 import iecsLogo from './assets/handbook/iecs-logo.png'
@@ -14,7 +13,6 @@ const navItems = [
   { label: '認識系學會', href: '#student-association' },
   { label: '迎新宿營', href: '#camp' },
   { label: '系會費', href: '#fee' },
-  { label: '系服資訊', href: '#shirt' },
   { label: '聯絡我們', href: '#contact' },
 ]
 
@@ -135,9 +133,6 @@ function App() {
                 <a href="#fee" className="transition hover:text-blue-600 hover:underline">Mission 03 | 系會費與會員福利</a>
               </li>
               <li>
-                <a href="#shirt" className="transition hover:text-blue-600 hover:underline">Mission 04 | 系服與周邊</a>
-              </li>
-              <li>
                 <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
               </li>
               <li>
@@ -151,7 +146,6 @@ function App() {
       <AboutSection />
       <CampSection />
       <FeeSection />
-      <MerchSection />
       <ContactSection />
       <ScheduleSection />
       <TransportSection />

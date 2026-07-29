@@ -2,16 +2,8 @@ import { BadgeDollarSign, CheckCircle2, MapPin, ReceiptText, Wallet } from 'luci
 
 const plans = [
   {
-    name: '早鳥限時優惠',
-    meta: '9/14 前',
-    price: '敬請期待',
-    description: '系會費一年方案 + 迎新宿營',
-    highlight: false,
-    tag: '🔥 即將截止',
-  },
-  {
     name: '四年方案',
-    meta: '推薦方案',
+    meta: '',
     price: '$2500',
     description: '一次完成大學四年的系學會會員方案',
     highlight: true,
@@ -46,7 +38,7 @@ function FeeSection() {
             </h2>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
             {plans.map((plan) => (
               <article
                 key={plan.name}
@@ -59,15 +51,12 @@ function FeeSection() {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-xl font-black">{plan.name}</h3>
-                    <p className="mt-1 text-sm font-bold text-zinc-600">
-                      {plan.meta}
-                    </p>
+                    {plan.meta && (
+                      <p className="mt-1 text-sm font-bold text-zinc-600">
+                        {plan.meta}
+                      </p>
+                    )}
                   </div>
-                  {plan.highlight && (
-                    <span className="rounded-full border-2 border-zinc-950 bg-white px-3 py-1 text-xs font-black">
-                      推薦
-                    </span>
-                  )}
                   {plan.tag && (
                     <span className="shrink-0 rounded-full border-2 border-zinc-950 bg-red-100 px-3 py-1 text-xs font-black text-red-600">
                       {plan.tag}
