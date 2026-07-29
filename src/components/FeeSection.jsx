@@ -139,7 +139,7 @@ function FeeSection() {
                 {/* 右邊：帳戶 */}
                 <div className="md:flex md:flex-col md:justify-center">
                   <div className="w-full space-y-1 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
-                    <p className="whitespace-nowrap"><strong>銀行：</strong>台中逢甲郵局 / 代號 700</p>
+                    <p className="whitespace-nowrap"><strong>銀行：</strong>臺中逢甲郵局 / 代號 700</p>
                     <p className="whitespace-nowrap"><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
                     <p className="whitespace-nowrap"><strong>帳號：</strong>0021256 0893462</p>
                   </div>
