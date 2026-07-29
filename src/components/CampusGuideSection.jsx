@@ -1,29 +1,29 @@
 import { useState } from 'react'
-import { Map, School, Sparkles, X, Coffee, Landmark, BookOpen, Cpu, Monitor, Briefcase, Dumbbell, Building2 } from 'lucide-react'
+import { Map, School, Sparkles, X, Landmark, BookOpen, Monitor, Dumbbell, Building2 } from 'lucide-react'
 import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
 import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
 
 const abbreviations = [
-  { shortName: '忠', fullName: '忠勤樓', desc: '學校大門進來左邊的建築，樓下有鬆餅屋喔', icon: Coffee },
+  { shortName: '忠', fullName: '忠勤樓', desc: '學校大門進來左邊的建築，樓下有鬆餅屋喔', icon: Building2 },
   { shortName: '商', fullName: '商學大樓', desc: '商學門進來的第一棟建築，是商學院科系的上課地點，一樓有座位區，也有販賣機', icon: Building2 },
   { shortName: '工', fullName: '工學館' },
-  { shortName: '人', fullName: '人言大樓', desc: '逢甲最高的建築，部分通識課/中文課/英文課的地點，人言一樓及樓下有座位區供吃飯休息，但是人言不可以睡覺喔', icon: Coffee },
+  { shortName: '人', fullName: '人言大樓', desc: '逢甲最高的建築，部分通識課/中文課/英文課的地點，人言一樓及樓下有座位區供吃飯休息，但是人言不可以睡覺喔', icon: Building2 },
+  { shortName: '學', fullName: '學思樓', desc: '星巴門進來左邊的建築，一樓有座位區', icon: Building2 },
   { shortName: '建', fullName: '建築館' },
-  { shortName: '土', fullName: '土木水利館' },
-  { shortName: '學', fullName: '學思樓', desc: '星巴門進來左邊的建築，一樓有座位區', icon: Coffee },
   { shortName: '紀', fullName: '丘逢甲紀念館', desc: '學校最具代表性的建築，是為了紀念丘逢甲。在以前有一個都市傳說，只要踩到紀念館前方的草坪，據說那個學期就會被二一', icon: Landmark },
-  { shortName: '育', fullName: '育樂館' },
-  { shortName: '人社', fullName: '人文社會館' },
   { shortName: '圖', fullName: '圖書館', desc: '一樓有座位區可以睡覺，但不能帶食物及飲料喔，樓上也有讀書的地方', icon: BookOpen },
-  { shortName: '資電', fullName: '資訊電機館', desc: '資訊系學生在逢甲最常去的建築，這邊有各位接下來四年大部分必選修科目的教室喔，資訊系的系辦公室就在資電二樓', icon: Cpu },
+  { shortName: '土', fullName: '土木水利館' },
+  { shortName: '資電', fullName: '資訊電機館', desc: '資訊系學生在逢甲最常去的建築，這邊有各位接下來四年大部分必選修科目的教室喔，資訊系的系辦公室就在資電二樓', icon: Building2 },
+  { shortName: '科航', fullName: '科學與航太館', desc: '科航樓下有自修室，晚上都會看到裡面有一堆人在卷', icon: BookOpen },
+  { shortName: '育', fullName: '育樂館' },
+  { shortName: '行', fullName: '行政大樓', desc: '這邊一樓有座位區，可以吃飯睡覺，樓上就是apple駐逢甲的教育培訓中心', icon: Monitor },
+  { shortName: '行二', fullName: '行政二館', desc: '這裡是學校的行政中心，有事情找教官也是來這裡喔', icon: Landmark },
+  { shortName: '人社', fullName: '人文社會館' },
+  { shortName: '體', fullName: '體育館', desc: '旁邊就是遊泳池，二樓和四樓有校內健身房，這邊也可以常常看到校隊在練習喔', icon: Dumbbell },
   { shortName: '語', fullName: '語文大樓' },
+  { shortName: 'V', fullName: '共善樓', desc: '學校新蓋好的，也有座位區可以吃飯，裡面看起來很高級', icon: Building2 },
   { shortName: '電通', fullName: '電子通訊館' },
   { shortName: '理', fullName: '理學大樓' },
-  { shortName: '科航', fullName: '科學與航太館', desc: '科航樓下有自修室，晚上都會看到裡面有一堆人在卷', icon: BookOpen },
-  { shortName: '行', fullName: '行政大樓', desc: '這邊一樓有座位區，可以吃飯睡覺，樓上就是apple駐逢甲的教育培訓中心', icon: Monitor },
-  { shortName: '行二', fullName: '行政二館', desc: '這裡是學校的行政中心，有事情找教官也是來這裡喔', icon: Briefcase },
-  { shortName: '體', fullName: '體育館', desc: '旁邊就是遊泳池，二樓和四樓有校內健身房，這邊也可以常常看到校隊在練習喔', icon: Dumbbell },
-  { shortName: 'V', fullName: '共善樓', desc: '學校新蓋好的，也有座位區可以吃飯，裡面看起來很高級', icon: Building2 },
 ]
 
 function CampusGuideSection() {

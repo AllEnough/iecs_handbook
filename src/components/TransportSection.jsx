@@ -31,6 +31,15 @@ function TransportSection() {
                     <li>搭乘免費快捷公車 160 至「逢甲大學」站</li>
                     <li>搭乘計程車約 20-30 分鐘即可抵達</li>
                   </ul>
+                  <a
+                    href="https://www.google.com/maps/dir/高鐵台中站/逢甲大學"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-2 text-sm font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
+                  >
+                    <MapPin size={16} />
+                    高鐵台中站到逢甲大學的導航
+                  </a>
                 </div>
                 
                 <div>
@@ -42,6 +51,15 @@ function TransportSection() {
                     <li>搭乘公車 25、33、35 至「逢甲大學」站</li>
                     <li>搭乘計程車約 30 分鐘即可抵達</li>
                   </ul>
+                  <a
+                    href="https://www.google.com/maps/dir/台中火車站/逢甲大學"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-2 text-sm font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
+                  >
+                    <MapPin size={16} />
+                    台中火車站到逢甲大學的導航
+                  </a>
                 </div>
               </div>
             </article>
@@ -66,21 +84,17 @@ function TransportSection() {
                   <MapPin size={20} className="mb-2 text-red-500" />
                   校內與周邊設有收費停車場（如：逢甲大學福星停車場、文華立體停車場）。
                 </div>
+                <a
+                  href="https://www.google.com/maps/dir//逢甲大學"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#facc15] hover:shadow-[4px_4px_0_#18181b]"
+                >
+                  <MapPin size={20} />
+                  導航到逢甲大學
+                </a>
               </div>
             </article>
-          </div>
-
-          <div className="mt-8 overflow-hidden rounded-lg border-4 border-zinc-950 shadow-[6px_6px_0_#18181b]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.1197824128527!2d120.64333631536762!3d24.18115687864858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346916212e52b861%3A0x7d6f51df170eec13!2z6YCi55Sy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1714545564852!5m2!1szh-TW!2stw"
-              width="100%"
-              height="350"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="逢甲大學地圖"
-            ></iframe>
           </div>
         </div>
       </div>
