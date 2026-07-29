@@ -4,14 +4,14 @@ import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
 import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
 
 const abbreviations = [
-  { shortName: '忠', fullName: '忠勤樓' },
-  { shortName: '商', fullName: '商學大樓' },
+  { shortName: '忠', fullName: '忠勤樓', desc: '學校大門進來左邊的建築，樓下有鬆餅屋喔' },
+  { shortName: '商', fullName: '商學大樓', desc: '商學門進來的第一棟建築，是商學院科系的上課地點，一樓有座位區，也有販賣機' },
   { shortName: '工', fullName: '工學館' },
   { shortName: '人', fullName: '人言大樓', desc: '逢甲最高的建築，部分通識課/中文課/英文課的地點，人言一樓及樓下有座位區供吃飯休息，但是人言不可以睡覺喔' },
   { shortName: '建', fullName: '建築館' },
   { shortName: '土', fullName: '土木水利館' },
-  { shortName: '學', fullName: '學思樓' },
-  { shortName: '紀', fullName: '丘逢甲紀念館' },
+  { shortName: '學', fullName: '學思樓', desc: '星巴門進來左邊的建築，一樓有座位區' },
+  { shortName: '紀', fullName: '丘逢甲紀念館', desc: '學校最具代表性的建築，為了紀念丘逢甲，以前有一個都市傳說，只要踩到紀念館前方的草坪，就會被二一' },
   { shortName: '育', fullName: '育樂館' },
   { shortName: '人社', fullName: '人文社會館' },
   { shortName: '圖', fullName: '圖書館', desc: '一樓有座位區可以睡覺，但不能帶食物及飲料喔，樓上也有讀書的地方' },
@@ -19,7 +19,11 @@ const abbreviations = [
   { shortName: '語', fullName: '語文大樓' },
   { shortName: '電通', fullName: '電子通訊館' },
   { shortName: '理', fullName: '理學大樓' },
-  { shortName: '科航', fullName: '科學與航太館' },
+  { shortName: '科航', fullName: '科學與航太館', desc: '科航樓下有自修室，晚上都會看到裡面有一堆人在卷' },
+  { shortName: '行', fullName: '行政大樓', desc: '這邊一樓有座位區，可以吃飯睡覺，樓上就是apple駐逢甲的中心' },
+  { shortName: '行二', fullName: '行政二館', desc: '這裡是學校的行政中心，有事情找教官也是來這裡喔' },
+  { shortName: '體', fullName: '體育館', desc: '旁邊就是遊泳池，二樓和四樓有校內健身房，這邊也可以常常看到校隊在練習喔' },
+  { shortName: 'V', fullName: '共善樓', desc: '學校新蓋好的，也有座位區可以吃飯，裡面看起來很高級' },
 ]
 
 function CampusGuideSection() {
@@ -45,8 +49,8 @@ function CampusGuideSection() {
               </p>
 
               <div className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
-                <School size={20} />
-                新生常見校園縮寫整理
+                <School size={20} className="shrink-0" />
+                <span>教室代號如「商207」，即代表商學大樓2樓207教室。</span>
               </div>
             </div>
 
