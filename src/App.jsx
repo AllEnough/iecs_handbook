@@ -130,7 +130,7 @@ function App() {
                 <a href="#camp" className="transition hover:text-blue-600 hover:underline">Mission 02 | 解鎖迎新宿營</a>
               </li>
               <li>
-                <a href="#fee" className="transition hover:text-blue-600 hover:underline">Mission 03 | 系會費與會員福利</a>
+                <a href="#fee" className="transition hover:text-blue-600 hover:underline">Mission 03 | 系會費</a>
               </li>
               <li>
                 <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
