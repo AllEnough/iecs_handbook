@@ -3,8 +3,8 @@ import { AtSign, Building2, HelpCircle, MapPin, UserRound } from 'lucide-react'
 const contacts = [
   {
     icon: Building2,
-    title: '辦公室',
-    detail: '系主任：張哲誠',
+    title: '系主任',
+    detail: '張哲誠 主任',
     subDetail: '04-24517250 #3764 / checchang@fcu.edu.tw',
   },
   {
