@@ -13,8 +13,8 @@ const navItems = [
   { label: '認識系學會', href: '#student-association' },
   { label: '迎新宿營', href: '#camp' },
   { label: '系會費', href: '#fee' },
-  { label: '逢甲小知識', href: '#schedule' },
   { label: '聯絡我們', href: '#contact' },
+  { label: 'Extra', href: '#schedule' },
 ]
 
 function App() {
