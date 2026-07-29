@@ -1,4 +1,4 @@
-import { BadgeDollarSign, CheckCircle2, MapPin, ReceiptText, Wallet } from 'lucide-react'
+import { BadgeDollarSign, CheckCircle2, CreditCard, MapPin, ReceiptText, Wallet } from 'lucide-react'
 
 const plans = [
   {
@@ -72,22 +72,41 @@ function FeeSection() {
             ))}
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
+          <div className="mt-8 grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
             <div className="flex flex-col justify-between rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
               <div>
                 <h3 className="flex items-center gap-2 text-xl font-black">
                   <Wallet size={22} />
                   繳費資訊
                 </h3>
-                <div className="mt-4 space-y-3 text-base font-bold leading-7 text-zinc-800">
-                  <p className="flex items-center gap-2">
-                    <ReceiptText size={20} />
-                    繳費方式：現金 or 匯款
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <MapPin size={20} />
-                    現場繳費地點：資電 B30
-                  </p>
+                <div className="mt-5 space-y-6 text-base font-bold leading-7 text-zinc-800">
+                  {/* 現金繳費 */}
+                  <div>
+                    <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
+                      <MapPin size={20} />
+                      現金繳費
+                    </h4>
+                    <p className="mt-1 font-medium">開學後至資電 B30 繳交系會費</p>
+                  </div>
+
+                  {/* 匯款繳費 */}
+                  <div>
+                    <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
+                      <CreditCard size={20} />
+                      匯款繳費
+                    </h4>
+                    <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
+                      <li>用銀行轉帳匯入款項至系學會帳戶</li>
+                      <li>轉帳備注欄填寫 <span className="bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
+                      <li>完成後記得保存轉帳紀錄（收據）以便後續對帳，保護自身權益</li>
+                    </ol>
+                    
+                    <div className="mt-4 space-y-1 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
+                      <p><strong>銀行：</strong>台中逢甲郵局 / 代號 700</p>
+                      <p><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
+                      <p><strong>帳號：</strong>0021256 0893462</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <a
