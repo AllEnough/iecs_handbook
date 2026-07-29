@@ -1,4 +1,4 @@
-import { BadgeDollarSign, CheckCircle2, CreditCard, MapPin, ReceiptText, Wallet } from 'lucide-react'
+import { BadgeDollarSign, CheckCircle2, CreditCard, MapPin, Wallet } from 'lucide-react'
 
 const plans = [
   {
