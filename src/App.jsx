@@ -13,6 +13,7 @@ const navItems = [
   { label: '認識系學會', href: '#student-association' },
   { label: '迎新宿營', href: '#camp' },
   { label: '系會費', href: '#fee' },
+  { label: '逢甲小知識', href: '#schedule' },
   { label: '聯絡我們', href: '#contact' },
 ]
 
@@ -146,10 +147,16 @@ function App() {
       <AboutSection />
       <CampSection />
       <FeeSection />
-      <ContactSection />
       <ScheduleSection />
       <TransportSection />
       <CampusGuideSection />
+      <ContactSection />
+
+      <footer className="border-t-4 border-zinc-950 bg-zinc-950 py-8 text-center text-white">
+        <p className="text-sm font-bold tracking-wider">
+          © {new Date().getFullYear()} 逢甲大學資訊工程學系系學會 (FCU IECS). All rights reserved.
+        </p>
+      </footer>
 
       <a
         href="#top"
