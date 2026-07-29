@@ -110,7 +110,7 @@ function FeeSection() {
                 </a>
               </div>
 
-              <div className="mt-5 space-y-6 text-base font-bold leading-7 text-zinc-800 md:mt-0 md:flex-1 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+              <div className="mt-5 space-y-6 text-base font-bold leading-7 text-zinc-800 md:mt-0 md:flex-1 md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-6 md:space-y-0 lg:grid-cols-[0.9fr_1.1fr]">
                 {/* 左邊：現金與匯款 */}
                 <div className="space-y-6">
                   {/* 現金繳費 */}
@@ -139,9 +139,9 @@ function FeeSection() {
                 {/* 右邊：帳戶 */}
                 <div className="md:flex md:flex-col md:justify-center">
                   <div className="w-full space-y-1 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
-                    <p><strong>銀行：</strong>台中逢甲郵局 / 代號 700</p>
-                    <p><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
-                    <p><strong>帳號：</strong>0021256 0893462</p>
+                    <p className="whitespace-nowrap"><strong>銀行：</strong>台中逢甲郵局 / 代號 700</p>
+                    <p className="whitespace-nowrap"><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
+                    <p className="whitespace-nowrap"><strong>帳號：</strong>0021256 0893462</p>
                   </div>
                 </div>
               </div>
