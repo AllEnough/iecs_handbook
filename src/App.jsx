@@ -147,10 +147,10 @@ function App() {
       <AboutSection />
       <CampSection />
       <FeeSection />
+      <ContactSection />
       <ScheduleSection />
       <TransportSection />
       <CampusGuideSection />
-      <ContactSection />
 
       <footer className="border-t-4 border-zinc-950 bg-zinc-950 py-8 text-center text-white">
         <p className="text-sm font-bold tracking-wider">
