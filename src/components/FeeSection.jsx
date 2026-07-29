@@ -38,95 +38,51 @@ function FeeSection() {
             </h2>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
             {plans.map((plan) => (
               <article
                 key={plan.name}
-                className={`rounded-lg border-4 border-zinc-950 p-5 shadow-[5px_5px_0_#18181b] ${
+                className={`flex flex-col justify-between rounded-lg border-4 border-zinc-950 p-5 shadow-[5px_5px_0_#18181b] ${
                   plan.highlight
                     ? 'bg-[#ffe993] md:-translate-y-2'
                     : 'bg-[#f8fbff]'
                 }`}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-black">{plan.name}</h3>
-                    {plan.meta && (
-                      <p className="mt-1 text-sm font-bold text-zinc-600">
-                        {plan.meta}
-                      </p>
+                <div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="text-xl font-black">{plan.name}</h3>
+                      {plan.meta && (
+                        <p className="mt-1 text-sm font-bold text-zinc-600">
+                          {plan.meta}
+                        </p>
+                      )}
+                    </div>
+                    {plan.tag && (
+                      <span className="shrink-0 rounded-full border-2 border-zinc-950 bg-red-100 px-3 py-1 text-xs font-black text-red-600">
+                        {plan.tag}
+                      </span>
                     )}
                   </div>
-                  {plan.tag && (
-                    <span className="shrink-0 rounded-full border-2 border-zinc-950 bg-red-100 px-3 py-1 text-xs font-black text-red-600">
-                      {plan.tag}
-                    </span>
-                  )}
-                </div>
 
-                <p className="mt-5 text-3xl font-black">{plan.price}</p>
-                <p className="mt-3 text-sm font-medium leading-6 text-zinc-700">
-                  {plan.description}
-                </p>
+                  <p className="mt-5 text-3xl font-black">{plan.price}</p>
+                  <p className="mt-3 text-sm font-medium leading-6 text-zinc-700">
+                    {plan.description}
+                  </p>
+                </div>
               </article>
             ))}
-          </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
-            <div className="flex flex-col justify-between rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
-              <div>
-                <h3 className="flex items-center gap-2 text-xl font-black">
-                  <Wallet size={22} />
-                  繳費資訊
-                </h3>
-                <div className="mt-5 space-y-6 text-base font-bold leading-7 text-zinc-800">
-                  {/* 現金繳費 */}
-                  <div>
-                    <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
-                      <MapPin size={20} />
-                      現金繳費
-                    </h4>
-                    <p className="mt-1 font-medium">開學後至資電 B30 繳交系會費</p>
-                  </div>
-
-                  {/* 匯款繳費 */}
-                  <div>
-                    <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
-                      <CreditCard size={20} />
-                      匯款繳費
-                    </h4>
-                    <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
-                      <li>用銀行轉帳匯入款項至系學會帳戶</li>
-                      <li>轉帳備注欄填寫 <span className="bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
-                      <li>完成後記得保存轉帳紀錄（收據）以便後續對帳，保護自身權益</li>
-                    </ol>
-                    
-                    <div className="mt-4 space-y-1 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
-                      <p><strong>銀行：</strong>台中逢甲郵局 / 代號 700</p>
-                      <p><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
-                      <p><strong>帳號：</strong>0021256 0893462</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                href="#contact"
-                className="mt-6 flex items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
-              >
-                前往聯絡我們
-              </a>
-            </div>
-
-            <div className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
+            <div className="flex flex-col rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
               <h3 className="text-xl font-black">會員權利</h3>
               <ol className="mt-4 space-y-3">
                 {benefits.map((benefit) => (
                   <li
                     key={benefit}
-                    className="flex gap-3 text-base font-medium leading-7 text-zinc-800"
+                    className="flex gap-3 text-sm font-medium leading-6 text-zinc-800"
                   >
                     <CheckCircle2
-                      size={22}
+                      size={20}
                       className="mt-0.5 shrink-0 text-green-600"
                     />
                     <span>{benefit}</span>
@@ -134,6 +90,63 @@ function FeeSection() {
                 ))}
               </ol>
             </div>
+          </div>
+
+          <div className="mt-5 flex flex-col justify-between rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+            <div className="md:flex md:items-start md:justify-between md:gap-10">
+              <div className="md:w-1/3">
+                <h3 className="flex items-center gap-2 text-xl font-black">
+                  <Wallet size={22} />
+                  繳費資訊
+                </h3>
+                <p className="mt-2 text-sm font-bold text-zinc-600">
+                  請選擇現金或匯款方式繳交系會費。
+                </p>
+                <a
+                  href="#contact"
+                  className="mt-6 hidden md:flex items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
+                >
+                  前往聯絡我們
+                </a>
+              </div>
+
+              <div className="mt-5 space-y-6 text-base font-bold leading-7 text-zinc-800 md:mt-0 md:flex-1 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+                {/* 現金繳費 */}
+                <div>
+                  <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
+                    <MapPin size={20} />
+                    現金繳費
+                  </h4>
+                  <p className="mt-1 font-medium">開學後至資電 B30 繳交系會費</p>
+                </div>
+
+                {/* 匯款繳費 */}
+                <div>
+                  <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
+                    <CreditCard size={20} />
+                    匯款繳費
+                  </h4>
+                  <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
+                    <li>用銀行轉帳匯入款項至系學會帳戶</li>
+                    <li>轉帳備注欄填寫 <span className="bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
+                    <li>完成後記得保存轉帳紀錄以便對帳</li>
+                  </ol>
+                  
+                  <div className="mt-4 space-y-1 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
+                    <p><strong>銀行：</strong>台中逢甲郵局 / 代號 700</p>
+                    <p><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
+                    <p><strong>帳號：</strong>0021256 0893462</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              className="mt-6 flex md:hidden items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
+            >
+              前往聯絡我們
+            </a>
           </div>
         </div>
       </div>
