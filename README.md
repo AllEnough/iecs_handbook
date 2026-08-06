@@ -12,7 +12,6 @@ https://iecs-handbook.vercel.app/
 - Mission 01：認識系學會
 - Mission 02：迎新宿營
 - Mission 03：系會費與會員福利
-- Mission 04：系服與周邊
 - Final Mission：聯絡我們與常見問題
 - Extra：活動預告、學生福利、逢甲小知識與校園地圖
 

@@ -5,21 +5,21 @@ const plans = [
     name: '四年方案',
     meta: '',
     price: '$2500',
-    description: '一次完成大學四年的系學會會員方案',
+    description: '一次繳交大學四年的系學會會員費用',
     highlight: true,
   },
   {
     name: '一年方案',
     meta: '彈性選擇',
     price: '$800',
-    description: '適合先體驗系學會會員福利的新生',
+    description: '適合先以一年為單位參與系學會會員方案的新生',
     highlight: false,
   },
 ]
 
 const benefits = [
-  '會員期限內所有系上舉辦的活動皆能享有優惠價格！',
-  '會員期限內一年一次的資訊之夜可獲得會員專屬摸彩券！',
+  '會員期限內，系上舉辦的活動可享有會員優惠價格。',
+  '會員期限內，資訊之夜可獲得會員專屬摸彩券。',
 ]
 
 function FeeSection() {
@@ -100,7 +100,7 @@ function FeeSection() {
                   繳費資訊
                 </h3>
                 <p className="mt-2 text-sm font-bold text-zinc-600">
-                  請選擇現金或匯款方式繳交系會費。
+                  以下資訊為系會費繳費方式，若有更新請以系學會公告為準。
                 </p>
                 <a
                   href="#contact"
@@ -119,7 +119,7 @@ function FeeSection() {
                       <MapPin size={20} />
                       現金繳費
                     </h4>
-                    <p className="mt-1 font-medium">開學後至資電 B30 繳交系會費</p>
+                    <p className="mt-1 font-medium">開學後可至資電 B30 繳交系會費</p>
                   </div>
 
                   {/* 匯款繳費 */}
@@ -129,8 +129,8 @@ function FeeSection() {
                       匯款繳費
                     </h4>
                     <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
-                      <li>用銀行轉帳匯入款項至系學會帳戶</li>
-                      <li>轉帳備注欄填寫 <span className="bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
+                      <li>將系會費轉帳至系學會帳戶</li>
+                      <li>轉帳備註欄填寫 <span className="bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
                       <li>完成後記得保存轉帳紀錄以便對帳</li>
                     </ol>
                   </div>

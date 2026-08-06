@@ -98,7 +98,7 @@ function App() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-zinc-800 md:text-xl md:leading-9">
-            這份線上新生手冊會帶你了解入學前的重要資訊，包含聯絡資訊、系學會、迎新宿營、系會費、系服資訊、校園地圖與常見問題。
+            這份線上新生手冊整理了入學前會用到的重要資訊，包含系學會介紹、迎新宿營、系會費、聯絡窗口、活動預告與校園地圖。
           </p>
 
           <a
@@ -137,7 +137,7 @@ function App() {
                 <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
               </li>
               <li>
-                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動預告與逢甲小知識</a>
+                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動預告與校園指南</a>
               </li>
             </ul>
           </div>

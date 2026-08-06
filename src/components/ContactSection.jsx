@@ -1,4 +1,5 @@
-import { AtSign, Building2, HelpCircle, MapPin, UserRound, Rocket, Code } from 'lucide-react'
+import { AtSign, Building2, HelpCircle, MapPin, QrCode, UserRound, Rocket, Code } from 'lucide-react'
+import fcuIecsQr from '../assets/handbook/fcu-iecs-qr.png'
 
 const contacts = [
   {
@@ -52,7 +53,7 @@ function ContactSection() {
               </h2>
 
               <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
-                有任何入學、活動、系會費或新生群相關問題，都可以從這裡找到聯絡窗口。
+                有任何入學、活動、系會費或新生群相關問題，可以先從這裡找到對應的聯絡窗口。
               </p>
             </div>
 
@@ -95,6 +96,23 @@ function ContactSection() {
                   </article>
                 )
               })}
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-5 rounded-lg border-4 border-zinc-950 bg-[#ffe993] p-5 shadow-[5px_5px_0_#18181b] md:grid-cols-[180px_1fr] md:items-center md:p-6">
+            <img
+              src={fcuIecsQr}
+              alt="FCU_IECS 系學會 Instagram QR Code"
+              className="mx-auto w-40 rounded-md border-4 border-zinc-950 bg-white"
+            />
+            <div>
+              <h3 className="flex items-center gap-2 text-2xl font-black">
+                <QrCode size={26} />
+                追蹤系學會 IG
+              </h3>
+              <p className="mt-3 text-base font-bold leading-8 text-zinc-800 md:text-lg">
+                活動公告、系學會消息與新生提醒會陸續發布在系學會 IG。可以掃描 QR Code，或點選上方「ig：@fcu_iecs」直接前往。
+              </p>
             </div>
           </div>
 
