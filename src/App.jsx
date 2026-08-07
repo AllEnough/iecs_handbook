@@ -156,6 +156,16 @@ function App() {
                 <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
               </li>
               <li>
+                <a
+                  href="https://www.iecs.fcu.edu.tw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-blue-600 hover:underline"
+                >
+                  官方系網 | 課程與系所資訊
+                </a>
+              </li>
+              <li>
                 <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動與福利</a>
               </li>
             </ul>

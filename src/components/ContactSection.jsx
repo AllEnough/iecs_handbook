@@ -1,4 +1,4 @@
-import { AtSign, Building2, HelpCircle, MapPin, QrCode, UserRound, Rocket, Code } from 'lucide-react'
+import { AtSign, Building2, Code, ExternalLink, Globe2, HelpCircle, MapPin, QrCode, Rocket, UserRound } from 'lucide-react'
 import fcuIecsQr from '../assets/handbook/fcu-iecs-qr.png'
 
 const contacts = [
@@ -20,6 +20,13 @@ const contacts = [
     detail: 'ig：@fcu_iecs',
     href: 'https://instagram.com/fcu_iecs',
     subDetail: '辦公室：逢甲大學資訊電機館 B30',
+  },
+  {
+    icon: Globe2,
+    title: '資訊工程學系系網',
+    detail: '前往系網',
+    href: 'https://www.iecs.fcu.edu.tw/',
+    subDetail: '課程、師資、系辦公告與系所資訊，可以到系網查看。',
   },
 ]
 
@@ -77,9 +84,10 @@ function ContactSection() {
                             href={contact.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-1 block text-base font-bold leading-7 text-blue-600 transition hover:underline"
+                            className="mt-1 inline-flex items-center gap-2 text-base font-bold leading-7 text-blue-600 transition hover:underline"
                           >
                             {contact.detail}
+                            <ExternalLink size={16} />
                           </a>
                         ) : (
                           <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
