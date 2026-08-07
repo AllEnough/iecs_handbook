@@ -36,20 +36,20 @@ function ScheduleSection() {
             </h2>
           </div>
 
+          <div className="mt-8 overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b]">
+            <img
+              src={growthCampPhoto}
+              alt="新鮮人成長營活動合照"
+              className="aspect-video max-h-[360px] w-full object-cover object-[center_58%] md:aspect-[16/5]"
+            />
+          </div>
+
           <div className="mt-8 grid gap-6 md:grid-cols-[1.05fr_0.95fr] md:items-start">
             <div className="rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]">
               <h3 className="flex items-center gap-2 text-2xl font-black">
                 <CalendarClock size={26} />
                 活動時間軸
               </h3>
-
-              <div className="mt-5 overflow-hidden rounded-md border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
-                <img
-                  src={growthCampPhoto}
-                  alt="新鮮人成長營活動合照"
-                  className="aspect-video h-full w-full object-cover"
-                />
-              </div>
 
               <div className="mt-6 space-y-5">
                 {events.map((event) => (
