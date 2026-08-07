@@ -130,7 +130,7 @@ function FeeSection() {
                     </h4>
                     <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
                       <li>將系會費轉帳至系學會帳戶</li>
-                      <li>轉帳備註欄填寫 <span className="inline-block bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
+                      <li>轉帳備注欄填寫 <span className="inline-block bg-[#ffe993] px-1 font-bold">班級/姓名 EX.一甲歐俊緯</span></li>
                       <li>完成後記得保存轉帳紀錄以便對帳</li>
                     </ol>
                   </div>
