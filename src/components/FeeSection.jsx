@@ -47,7 +47,7 @@ function FeeSection() {
   return (
     <section id="fee" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
+        <div className="motion-reveal lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <div className="max-w-3xl">
             <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
               <BadgeDollarSign size={18} />
@@ -64,7 +64,7 @@ function FeeSection() {
             {plans.map((plan) => (
               <article
                 key={plan.name}
-                className={`flex min-w-0 flex-col justify-between rounded-lg border-4 border-zinc-950 p-5 shadow-[5px_5px_0_#18181b] ${
+                className={`lift-card flex min-w-0 flex-col justify-between rounded-lg border-4 border-zinc-950 p-5 shadow-[5px_5px_0_#18181b] ${
                   plan.highlight
                     ? 'bg-[#ffe993] xl:-translate-y-2'
                     : 'bg-[#f8fbff]'
@@ -95,7 +95,7 @@ function FeeSection() {
               </article>
             ))}
 
-            <div className="flex min-w-0 flex-col rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b] sm:col-span-2 xl:col-span-1">
+            <div className="lift-card flex min-w-0 flex-col rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b] sm:col-span-2 xl:col-span-1">
               <h3 className="text-xl font-black">會員權利</h3>
               <ol className="mt-4 space-y-3">
                 {benefits.map((benefit) => (
@@ -127,7 +127,7 @@ function FeeSection() {
                 <button
                   type="button"
                   onClick={() => setIsPaymentGuideOpen(true)}
-                  className="mt-6 hidden w-full items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] px-5 py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b] lg:flex"
+                  className="pressable mt-6 hidden w-full items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] px-5 py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b] lg:flex"
                 >
                   <Eye size={22} />
                   查看繳費範例
@@ -188,7 +188,7 @@ function FeeSection() {
             <button
               type="button"
               onClick={() => setIsPaymentGuideOpen(true)}
-              className="mt-6 flex items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-2.5 text-base font-black shadow-[2px_2px_0_#18181b] transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#18181b] md:hidden"
+              className="pressable mt-6 flex items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-2.5 text-base font-black shadow-[2px_2px_0_#18181b] transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#18181b] md:hidden"
             >
               <Eye size={18} />
               查看繳費範例
@@ -199,12 +199,12 @@ function FeeSection() {
 
       {isPaymentGuideOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4 backdrop-blur-sm"
+          className="motion-reveal fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4 backdrop-blur-sm"
           role="presentation"
           onClick={closePaymentGuide}
         >
           <div
-            className="max-h-[88vh] w-full max-w-5xl overflow-y-auto rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b]"
+            className="motion-pop max-h-[88vh] w-full max-w-5xl overflow-y-auto rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b]"
             role="dialog"
             aria-modal="true"
             aria-labelledby="payment-guide-title"
@@ -222,7 +222,7 @@ function FeeSection() {
                 onClick={closePaymentGuide}
                 aria-label="關閉繳費方式範例"
                 autoFocus
-                className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-white hover:bg-zinc-100"
+                className="pressable grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-white hover:bg-zinc-100"
               >
                 <X size={20} />
               </button>

@@ -4,7 +4,7 @@ function TransportSection() {
   return (
     <section id="transport" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
+        <div className="motion-reveal lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
             <Compass size={18} />
             Guide
@@ -15,7 +15,7 @@ function TransportSection() {
           </h2>
 
           <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <article className="rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]">
+            <article className="lift-card rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]">
               <h3 className="flex items-center gap-2 text-2xl font-black">
                 <Train size={26} />
                 大眾運輸
@@ -35,7 +35,7 @@ function TransportSection() {
                     href="https://www.google.com/maps/dir/高鐵台中站/逢甲大學"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-2 text-sm font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
+                    className="pressable mt-3 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-2 text-sm font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
                   >
                     <MapPin size={16} />
                     高鐵台中站到逢甲大學的導航
@@ -55,7 +55,7 @@ function TransportSection() {
                     href="https://www.google.com/maps/dir/台中火車站/逢甲大學"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-2 text-sm font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
+                    className="pressable mt-3 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-2 text-sm font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
                   >
                     <MapPin size={16} />
                     台中火車站到逢甲大學的導航
@@ -64,7 +64,7 @@ function TransportSection() {
               </div>
             </article>
 
-            <article className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+            <article className="lift-card rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
               <h3 className="flex items-center gap-2 text-2xl font-black">
                 <Car size={26} />
                 自行開車
@@ -88,7 +88,7 @@ function TransportSection() {
                   href="https://www.google.com/maps/dir//逢甲大學"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#facc15] hover:shadow-[4px_4px_0_#18181b]"
+                  className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-bold text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#facc15] hover:shadow-[4px_4px_0_#18181b]"
                 >
                   <MapPin size={20} />
                   導航到逢甲大學

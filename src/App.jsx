@@ -38,11 +38,11 @@ function App() {
 
   return (
     <main className="min-h-screen bg-[#fff8e8] text-zinc-950">
-      <header className="sticky top-0 z-50 border-b-4 border-zinc-950 bg-[#fff8e8]/95 backdrop-blur">
+      <header className="motion-pop sticky top-0 z-50 border-b-4 border-zinc-950 bg-[#fff8e8]/95 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
           <a
             href="#top"
-            className="flex items-center gap-3 text-lg font-black tracking-wide"
+            className="pressable flex items-center gap-3 text-lg font-black tracking-wide"
           >
             <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full border-2 border-zinc-950 bg-zinc-950 shadow-[3px_3px_0_#facc15]">
               <img
@@ -59,7 +59,7 @@ function App() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-bold transition hover:text-blue-600"
+                className="text-sm font-bold transition hover:-translate-y-0.5 hover:text-blue-600"
               >
                 {item.label}
               </a>
@@ -68,7 +68,7 @@ function App() {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md border-2 border-zinc-950 bg-white shadow-[3px_3px_0_#18181b] md:hidden"
+            className="pressable inline-flex h-11 w-11 items-center justify-center rounded-md border-2 border-zinc-950 bg-white shadow-[3px_3px_0_#18181b] md:hidden"
             aria-label={isMenuOpen ? '關閉選單' : '開啟選單'}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -88,7 +88,7 @@ function App() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="rounded-md border-2 border-zinc-950 bg-white px-4 py-3 text-base font-bold shadow-[3px_3px_0_#18181b]"
+                  className="pressable rounded-md border-2 border-zinc-950 bg-white px-4 py-3 text-base font-bold shadow-[3px_3px_0_#18181b]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -103,7 +103,7 @@ function App() {
         id="top"
         className="mx-auto grid min-h-[calc(100vh-76px)] max-w-6xl content-center gap-10 px-5 py-14 md:grid-cols-[1.08fr_0.92fr] md:px-8 md:py-24"
       >
-        <div className="flex flex-col items-start justify-center">
+        <div className="motion-reveal flex flex-col items-start justify-center">
           <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#dff0ff] px-4 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
             <Sparkles size={18} />
             Mission Start
@@ -122,15 +122,15 @@ function App() {
 
           <a
             href="#student-association"
-            className="mt-8 inline-flex items-center gap-2 rounded-full border-4 border-zinc-950 bg-[#ffe993] px-8 py-4 text-lg font-black shadow-[5px_5px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[7px_7px_0_#18181b]"
+            className="pressable mt-8 inline-flex items-center gap-2 rounded-full border-4 border-zinc-950 bg-[#ffe993] px-8 py-4 text-lg font-black shadow-[5px_5px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[7px_7px_0_#18181b]"
           >
             開始探索
             <ChevronRight size={22} strokeWidth={3} />
           </a>
         </div>
 
-        <div className="flex items-center justify-center md:justify-end">
-          <div className="w-full max-w-sm border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b]">
+        <div className="motion-reveal motion-delay-2 flex items-center justify-center md:justify-end">
+          <div className="lift-card w-full max-w-sm border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b]">
             <div className="mb-4 flex items-center justify-between border-b-2 border-zinc-950 pb-4">
               <div className="flex gap-2">
                 <span className="h-4 w-4 bg-red-400" />
@@ -179,7 +179,7 @@ function App() {
 
       <a
         href="#top"
-        className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full border-4 border-zinc-950 bg-[#ffe993] text-zinc-950 shadow-[4px_4px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[6px_6px_0_#18181b] md:bottom-10 md:right-10"
+        className="pressable fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full border-4 border-zinc-950 bg-[#ffe993] text-zinc-950 shadow-[4px_4px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[6px_6px_0_#18181b] md:bottom-10 md:right-10"
         aria-label="回到頂部"
       >
         <ArrowUp size={28} strokeWidth={3} />
