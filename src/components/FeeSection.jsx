@@ -180,9 +180,6 @@ function FeeSection() {
                       <strong className="whitespace-nowrap">帳號：</strong>
                       <span className="min-w-0 break-words">0021256 0893462</span>
                     </p>
-                    <p className="rounded-sm bg-[#ffe993] px-2 py-1 text-xs font-black leading-5 text-zinc-800 md:text-sm">
-                      轉帳時銀行代號請選 700，帳號輸入 00212560893462。
-                    </p>
                   </div>
                 </div>
               </div>
