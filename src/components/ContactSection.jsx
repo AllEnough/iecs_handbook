@@ -49,75 +49,73 @@ function ContactSection() {
     <section id="contact" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
-          <div className="grid gap-6 md:grid-cols-[0.95fr_1.05fr] md:gap-10">
-            <div>
-              <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
-                <MapPin size={18} />
-                Final Mission
-              </p>
+          <div className="max-w-3xl">
+            <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
+              <MapPin size={18} />
+              Final Mission
+            </p>
 
-              <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-5xl">
-                Final Mission | <span className="inline-block">聯絡我們</span>
-              </h2>
+            <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-5xl">
+              Final Mission | <span className="inline-block">聯絡我們</span>
+            </h2>
 
-              <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
-                有任何入學、活動、系會費或新生群相關問題，可以先從這裡找到對應的聯絡窗口。
-              </p>
-            </div>
+            <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
+              有任何入學、活動、系會費或新生群相關問題，可以先從這裡找到對應的聯絡窗口。
+            </p>
+          </div>
 
-            <div className="grid gap-4">
-              {contacts.map((contact) => {
-                const Icon = contact.icon
+          <div className="mt-8 grid gap-4 lg:grid-cols-2">
+            {contacts.map((contact) => {
+              const Icon = contact.icon
 
-                return (
-                  <article
-                    key={contact.title}
-                    className="rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]"
-                  >
-                    <div className="flex gap-4">
-                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993]">
-                        <Icon size={24} />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-black">{contact.title}</h3>
-                        {contact.href ? (
-                          <a
-                            href={contact.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-1 inline-flex items-center gap-2 text-base font-bold leading-7 text-blue-600 transition hover:underline"
-                          >
-                            {contact.detail}
-                            <ExternalLink size={16} />
-                          </a>
-                        ) : (
-                          <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
-                            {contact.detail}
-                          </p>
-                        )}
-                        {contact.subDetail && (
-                          <p className="mt-1 break-words text-sm font-medium leading-6 text-zinc-600">
-                            {contact.subDetail}
-                          </p>
-                        )}
-                        {contact.qr && (
-                          <div className="mt-4 flex flex-wrap items-center gap-4 rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
-                            <img
-                              src={contact.qr}
-                              alt="FCU_IECS 系學會 Instagram QR Code"
-                              className="w-24 shrink-0 rounded-md border-2 border-zinc-950 bg-white"
-                            />
-                            <p className="min-w-0 flex-1 text-sm font-bold leading-6 text-zinc-700">
-                              掃描 QR Code，或點選上方 ig 連結前往系學會 IG。
-                            </p>
-                          </div>
-                        )}
-                      </div>
+              return (
+                <article
+                  key={contact.title}
+                  className="h-full rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]"
+                >
+                  <div className="flex gap-4">
+                    <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993]">
+                      <Icon size={24} />
                     </div>
-                  </article>
-                )
-              })}
-            </div>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-black">{contact.title}</h3>
+                      {contact.href ? (
+                        <a
+                          href={contact.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-1 inline-flex items-center gap-2 text-base font-bold leading-7 text-blue-600 transition hover:underline"
+                        >
+                          {contact.detail}
+                          <ExternalLink size={16} />
+                        </a>
+                      ) : (
+                        <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
+                          {contact.detail}
+                        </p>
+                      )}
+                      {contact.subDetail && (
+                        <p className="mt-1 break-words text-sm font-medium leading-6 text-zinc-600">
+                          {contact.subDetail}
+                        </p>
+                      )}
+                      {contact.qr && (
+                        <div className="mt-4 flex flex-wrap items-center gap-4 rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
+                          <img
+                            src={contact.qr}
+                            alt="FCU_IECS 系學會 Instagram QR Code"
+                            className="w-24 shrink-0 rounded-md border-2 border-zinc-950 bg-white"
+                          />
+                          <p className="min-w-0 flex-1 text-sm font-bold leading-6 text-zinc-700">
+                            掃描 QR Code，或點選上方 ig 連結前往系學會 IG。
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
           </div>
 
           <div className="mt-8 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b] md:p-6">
