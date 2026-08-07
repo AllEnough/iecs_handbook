@@ -160,7 +160,7 @@ function FeeSection() {
                           <span className="inline-block bg-[#ffe993] px-1 font-bold">班級/姓名</span> EX.一甲歐俊緯
                         </span>
                       </li>
-                      <li>完成後記得保存轉帳紀錄以便對帳</li>
+                      <li>完成轉帳後請保留截圖，之後若系學會需要對帳可提供</li>
                     </ol>
                   </div>
                 </div>
@@ -179,6 +179,9 @@ function FeeSection() {
                     <p className="grid gap-1 sm:grid-cols-[auto_1fr]">
                       <strong className="whitespace-nowrap">帳號：</strong>
                       <span className="min-w-0 break-words">0021256 0893462</span>
+                    </p>
+                    <p className="rounded-sm bg-[#ffe993] px-2 py-1 text-xs font-black leading-5 text-zinc-800 md:text-sm">
+                      轉帳時銀行代號請選 700，帳號輸入 00212560893462。
                     </p>
                   </div>
                 </div>
@@ -234,6 +237,18 @@ function FeeSection() {
                 <span className="mx-1 inline-block bg-[#ffe993] px-1 font-black">班級/姓名</span>
                 ，方便系學會對帳。
               </p>
+
+              <ol className="grid gap-3 text-sm font-black leading-6 text-zinc-800 md:grid-cols-3 md:text-base">
+                <li className="rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
+                  1. 選擇銀行代號 700，輸入帳號 00212560893462。
+                </li>
+                <li className="rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
+                  2. 備註欄填寫班級/姓名，例如一甲歐俊緯。
+                </li>
+                <li className="rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
+                  3. 送出後保留轉帳截圖，方便後續對帳。
+                </li>
+              </ol>
 
               <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
                 <article className="rounded-lg border-4 border-zinc-950 bg-white p-4 shadow-[5px_5px_0_#18181b]">
