@@ -1,4 +1,5 @@
 import { CalendarClock, Gift, PartyPopper, Star } from 'lucide-react'
+import growthCampPhoto from '../assets/handbook/growth-camp.jpg'
 import infoNightPhoto from '../assets/handbook/info-night.jpg'
 
 const events = [
@@ -41,6 +42,14 @@ function ScheduleSection() {
                 <CalendarClock size={26} />
                 活動時間軸
               </h3>
+
+              <div className="mt-5 overflow-hidden rounded-md border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
+                <img
+                  src={growthCampPhoto}
+                  alt="新鮮人成長營活動合照"
+                  className="aspect-video h-full w-full object-cover"
+                />
+              </div>
 
               <div className="mt-6 space-y-5">
                 {events.map((event) => (
