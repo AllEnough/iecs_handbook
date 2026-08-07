@@ -94,7 +94,8 @@ function App() {
           </p>
 
           <h1 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
-            歡迎加入逢甲大學資訊工程學系 IECS！
+            <span className="block">歡迎加入逢甲大學</span>
+            <span className="block">資訊工程學系IECS!</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-zinc-800 md:text-xl md:leading-9">

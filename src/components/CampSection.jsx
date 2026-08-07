@@ -31,7 +31,7 @@ function CampSection() {
             </p>
 
             <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
-              迎新宿營是大一新生進入逢甲後最早接觸的大型活動之一。這次由七個科系共同舉辦，資訊系新生除了可以認識同班同學，也有機會和中文、外文、自控、通訊、電子與電機系的同學交流。詳細活動資訊會以活動 IG 公告為準。
+              不管你是活潑外向，還是害羞慢熱的同學，宿營都會是豐富你們學生活的重要活動！詳細資訊可以追蹤我們的IG帳號！！歡迎你們一起來參加！
             </p>
 
             <div className="mt-6 flex flex-col gap-3">

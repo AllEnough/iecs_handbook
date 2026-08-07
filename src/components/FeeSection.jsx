@@ -38,19 +38,19 @@ function FeeSection() {
             </h2>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {plans.map((plan) => (
               <article
                 key={plan.name}
-                className={`flex flex-col justify-between rounded-lg border-4 border-zinc-950 p-5 shadow-[5px_5px_0_#18181b] ${
+                className={`flex min-w-0 flex-col justify-between rounded-lg border-4 border-zinc-950 p-5 shadow-[5px_5px_0_#18181b] ${
                   plan.highlight
-                    ? 'bg-[#ffe993] md:-translate-y-2'
+                    ? 'bg-[#ffe993] xl:-translate-y-2'
                     : 'bg-[#f8fbff]'
                 }`}
               >
                 <div>
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="min-w-0">
                       <h3 className="text-xl font-black">{plan.name}</h3>
                       {plan.meta && (
                         <p className="mt-1 text-sm font-bold text-zinc-600">
@@ -65,7 +65,7 @@ function FeeSection() {
                     )}
                   </div>
 
-                  <p className="mt-5 text-3xl font-black">{plan.price}</p>
+                  <p className="mt-5 whitespace-nowrap text-3xl font-black">{plan.price}</p>
                   <p className="mt-3 text-sm font-medium leading-6 text-zinc-700">
                     {plan.description}
                   </p>
@@ -73,7 +73,7 @@ function FeeSection() {
               </article>
             ))}
 
-            <div className="flex flex-col rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
+            <div className="flex min-w-0 flex-col rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b] sm:col-span-2 xl:col-span-1">
               <h3 className="text-xl font-black">會員權利</h3>
               <ol className="mt-4 space-y-3">
                 {benefits.map((benefit) => (
@@ -93,8 +93,8 @@ function FeeSection() {
           </div>
 
           <div className="mt-5 flex flex-col justify-between rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
-            <div className="md:flex md:items-start md:justify-between md:gap-10">
-              <div className="md:w-1/3">
+            <div className="lg:flex lg:items-start lg:justify-between lg:gap-10">
+              <div className="lg:w-1/3">
                 <h3 className="flex items-center gap-2 text-xl font-black">
                   <Wallet size={22} />
                   繳費資訊
@@ -104,13 +104,13 @@ function FeeSection() {
                 </p>
                 <a
                   href="#contact"
-                  className="mt-6 hidden md:flex items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
+                  className="mt-6 hidden items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b] lg:flex"
                 >
                   前往聯絡我們
                 </a>
               </div>
 
-              <div className="mt-5 space-y-6 text-base font-bold leading-7 text-zinc-800 md:mt-0 md:flex-1 md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-6 md:space-y-0 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="mt-5 min-w-0 space-y-6 text-base font-bold leading-7 text-zinc-800 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 lg:mt-0 lg:flex-1 xl:grid-cols-[0.9fr_1.1fr]">
                 {/* 左邊：現金與匯款 */}
                 <div className="space-y-6">
                   {/* 現金繳費 */}
@@ -119,7 +119,7 @@ function FeeSection() {
                       <MapPin size={20} />
                       現金繳費
                     </h4>
-                    <p className="mt-1 font-medium">開學後可至資電 B30 繳交系會費</p>
+                    <p className="mt-1 font-medium leading-7">開學後可至資電 B30 繳交系會費</p>
                   </div>
 
                   {/* 匯款繳費 */}
@@ -130,7 +130,7 @@ function FeeSection() {
                     </h4>
                     <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
                       <li>將系會費轉帳至系學會帳戶</li>
-                      <li>轉帳備註欄填寫 <span className="bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
+                      <li>轉帳備註欄填寫 <span className="inline-block bg-[#ffe993] px-1 font-bold">班級/姓名/學號</span></li>
                       <li>完成後記得保存轉帳紀錄以便對帳</li>
                     </ol>
                   </div>
@@ -138,10 +138,19 @@ function FeeSection() {
 
                 {/* 右邊：帳戶 */}
                 <div className="md:flex md:flex-col md:justify-center">
-                  <div className="w-full space-y-1 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
-                    <p><strong>銀行：</strong>臺中逢甲郵局 / 代號 700</p>
-                    <p><strong>戶名：</strong>逢甲大學資訊工程系系學會歐俊緯</p>
-                    <p><strong>帳號：</strong>0021256 0893462</p>
+                  <div className="w-full min-w-0 space-y-2 rounded-md border-2 border-zinc-950 bg-white p-4 text-sm shadow-[3px_3px_0_#18181b] md:text-base">
+                    <p className="grid gap-1 sm:grid-cols-[auto_1fr]">
+                      <strong className="whitespace-nowrap">銀行：</strong>
+                      <span className="min-w-0 break-words">臺中逢甲郵局 / 代號 700</span>
+                    </p>
+                    <p className="grid gap-1 sm:grid-cols-[auto_1fr]">
+                      <strong className="whitespace-nowrap">戶名：</strong>
+                      <span className="min-w-0 break-words">逢甲大學資訊工程系系學會歐俊緯</span>
+                    </p>
+                    <p className="grid gap-1 sm:grid-cols-[auto_1fr]">
+                      <strong className="whitespace-nowrap">帳號：</strong>
+                      <span className="min-w-0 break-words">0021256 0893462</span>
+                    </p>
                   </div>
                 </div>
               </div>
