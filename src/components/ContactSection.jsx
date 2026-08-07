@@ -21,6 +21,7 @@ const contacts = [
     href: 'https://instagram.com/fcu_iecs',
     subDetail: '辦公室：逢甲大學資訊電機館 B30',
     qr: fcuIecsQr,
+    hideExternalIcon: true,
   },
   {
     icon: Globe2,
@@ -73,45 +74,42 @@ function ContactSection() {
                   key={contact.title}
                   className="h-full rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]"
                 >
-                  <div className="flex gap-4">
-                    <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993]">
-                      <Icon size={24} />
-                    </div>
-                    <div className="min-w-0">
-                      <h3 className="text-lg font-black">{contact.title}</h3>
-                      {contact.href ? (
-                        <a
-                          href={contact.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-1 inline-flex items-center gap-2 text-base font-bold leading-7 text-blue-600 transition hover:underline"
-                        >
-                          {contact.detail}
-                          <ExternalLink size={16} />
-                        </a>
-                      ) : (
-                        <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
-                          {contact.detail}
-                        </p>
-                      )}
-                      {contact.subDetail && (
-                        <p className="mt-1 break-words text-sm font-medium leading-6 text-zinc-600">
-                          {contact.subDetail}
-                        </p>
-                      )}
-                      {contact.qr && (
-                        <div className="mt-4 flex flex-wrap items-center gap-4 rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
-                          <img
-                            src={contact.qr}
-                            alt="FCU_IECS 系學會 Instagram QR Code"
-                            className="w-24 shrink-0 rounded-md border-2 border-zinc-950 bg-white"
-                          />
-                          <p className="min-w-0 flex-1 text-sm font-bold leading-6 text-zinc-700">
-                            掃描 QR Code，或點選上方 ig 連結前往系學會 IG。
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex min-w-0 gap-4">
+                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993]">
+                        <Icon size={24} />
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="text-lg font-black">{contact.title}</h3>
+                        {contact.href ? (
+                          <a
+                            href={contact.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1 inline-flex items-center gap-2 text-base font-bold leading-7 text-blue-600 transition hover:underline"
+                          >
+                            {contact.detail}
+                            {!contact.hideExternalIcon && <ExternalLink size={16} />}
+                          </a>
+                        ) : (
+                          <p className="mt-1 text-base font-bold leading-7 text-zinc-800">
+                            {contact.detail}
                           </p>
-                        </div>
-                      )}
+                        )}
+                        {contact.subDetail && (
+                          <p className="mt-1 break-words text-sm font-medium leading-6 text-zinc-600">
+                            {contact.subDetail}
+                          </p>
+                        )}
+                      </div>
                     </div>
+                    {contact.qr && (
+                      <img
+                        src={contact.qr}
+                        alt="FCU_IECS 系學會 Instagram QR Code"
+                        className="w-28 shrink-0 self-start rounded-md border-2 border-zinc-950 bg-white"
+                      />
+                    )}
                   </div>
                 </article>
               )
