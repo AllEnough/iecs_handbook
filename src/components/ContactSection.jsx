@@ -107,7 +107,7 @@ function ContactSection() {
                       <img
                         src={contact.qr}
                         alt="FCU_IECS 系學會 Instagram QR Code"
-                        className="w-28 shrink-0 self-start rounded-md border-2 border-zinc-950 bg-white"
+                        className="hidden w-28 shrink-0 self-start rounded-md border-2 border-zinc-950 bg-white sm:block"
                       />
                     )}
                   </div>
