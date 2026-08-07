@@ -54,39 +54,42 @@ function ScheduleSection() {
             />
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-[1.05fr_0.95fr] md:items-start">
-            <div className="rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]">
-              <h3 className="flex items-center gap-2 text-2xl font-black">
-                <CalendarClock size={26} />
-                活動時間軸
-              </h3>
+          <div className="mt-8 rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]">
+            <h3 className="flex items-center gap-2 text-2xl font-black">
+              <CalendarClock size={26} />
+              活動時間軸
+            </h3>
 
-              <div className="mt-6 space-y-5">
-                {events.map((event) => (
-                  <article key={event.title} className="flex gap-4">
-                    <div className="flex flex-col items-center">
-                      <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993] shadow-[2px_2px_0_#18181b]">
-                        <PartyPopper size={20} />
-                      </span>
-                      <span className="mt-2 h-full min-h-8 w-1 bg-zinc-950 last:hidden" />
-                    </div>
-
-                    <div className="flex-1 rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b]">
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {events.map((event, index) => (
+                <article
+                  key={event.title}
+                  className={`flex min-h-full flex-col rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] ${
+                    index === events.length - 1 ? 'md:col-span-2' : ''
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993] shadow-[2px_2px_0_#18181b]">
+                      <PartyPopper size={20} />
+                    </span>
+                    <div>
                       <p className="text-sm font-black text-blue-600">
                         {event.date}
                       </p>
                       <h4 className="mt-1 text-xl font-black">{event.title}</h4>
-                      <p className="mt-2 text-base font-medium leading-7 text-zinc-800">
-                        {event.note}
-                      </p>
                     </div>
-                  </article>
-                ))}
-              </div>
+                  </div>
+                  <p className="mt-4 text-base font-medium leading-7 text-zinc-800">
+                    {event.note}
+                  </p>
+                </article>
+              ))}
             </div>
+          </div>
 
-            <div className="rounded-lg border-4 border-zinc-950 bg-[#ffe993] p-5 shadow-[5px_5px_0_#18181b]">
-              <div className="mb-5 overflow-hidden rounded-md border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
+          <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-[#ffe993] p-5 shadow-[5px_5px_0_#18181b]">
+            <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div className="overflow-hidden rounded-md border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
                 <img
                   src={infoNightPhoto}
                   alt="資訊之夜活動合照"
@@ -94,14 +97,16 @@ function ScheduleSection() {
                 />
               </div>
 
-              <h3 className="flex items-center gap-2 text-2xl font-black">
-                <Gift size={26} />
-                學生福利
-              </h3>
+              <div>
+                <h3 className="flex items-center gap-2 text-2xl font-black">
+                  <Gift size={26} />
+                  學生福利
+                </h3>
 
-              <p className="mt-5 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
-                系學會與逢甲 Straight A 特約商店合作：逢甲資訊工程學系學生在 115 學年度可享副廠商品 8 折優惠（音頻與軟體商品除外）。另外也會有不定時團購與線上課程資訊，詳細內容請以系學會公告為準。
-              </p>
+                <p className="mt-5 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
+                  系學會與逢甲 Straight A 特約商店合作：逢甲資訊工程學系學生在 115 學年度可享副廠商品 8 折優惠（音頻與軟體商品除外）。另外也會有不定時團購與線上課程資訊，詳細內容請以系學會公告為準。
+                </p>
+              </div>
             </div>
           </div>
         </div>
