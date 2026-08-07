@@ -6,8 +6,8 @@ function CampSection() {
   return (
     <section id="camp" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="motion-reveal lift-card grid gap-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-10 md:p-8">
-          <div className="photo-frame order-2 overflow-hidden rounded-md border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b] md:order-1">
+        <div className="lift-card grid gap-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-10 md:p-8">
+          <div className="motion-reveal motion-delay-1 photo-frame order-2 overflow-hidden rounded-md border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b] md:order-1">
             <img
               src={campPhoto}
               alt="迎新宿營活動合照"
@@ -35,10 +35,10 @@ function CampSection() {
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
-              <div className="rounded-full border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
+              <div className="motion-reveal rounded-full border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
                 報名與繳費方式：請依活動 IG 與系學會公告為準
               </div>
-              <div className="pressable inline-flex items-center gap-2 rounded-full border-2 border-zinc-950 bg-white px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
+              <div className="motion-reveal motion-delay-1 pressable inline-flex items-center gap-2 rounded-full border-2 border-zinc-950 bg-white px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
                 <AtSign size={20} />
                 活動 IG：
                 <a
@@ -50,7 +50,7 @@ function CampSection() {
                   @115.fcu.7camping
                 </a>
               </div>
-              <div className="hidden gap-4 rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] sm:grid sm:grid-cols-[120px_1fr] sm:items-center">
+              <div className="motion-reveal motion-delay-2 hidden gap-4 rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] sm:grid sm:grid-cols-[120px_1fr] sm:items-center">
                 <img
                   src={campIgQr}
                   alt="115.fcu.7camping 迎新宿營 Instagram QR Code"

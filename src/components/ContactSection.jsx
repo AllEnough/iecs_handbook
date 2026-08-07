@@ -49,7 +49,7 @@ function ContactSection() {
   return (
     <section id="contact" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="motion-reveal lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
+        <div className="lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <div className="max-w-3xl">
             <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
               <MapPin size={18} />
@@ -72,7 +72,7 @@ function ContactSection() {
               return (
                 <article
                   key={contact.title}
-                  className="lift-card h-full rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]"
+                  className="motion-reveal lift-card h-full rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]"
                 >
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex min-w-0 gap-4">
@@ -126,7 +126,7 @@ function ContactSection() {
               {faqs.map((faq) => (
                 <article
                   key={faq.question}
-                  className="lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[4px_4px_0_#18181b]"
+                  className="motion-reveal lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[4px_4px_0_#18181b]"
                 >
                   <h4 className="text-lg font-black">{faq.question}</h4>
                   <p className="mt-3 text-base font-medium leading-8 text-zinc-800">
@@ -137,7 +137,7 @@ function ContactSection() {
             </div>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-3 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-center text-white shadow-[5px_5px_0_#facc15] md:p-6">
+          <div className="motion-reveal mt-8 flex items-center justify-center gap-3 rounded-lg border-4 border-zinc-950 bg-zinc-950 p-5 text-center text-white shadow-[5px_5px_0_#facc15] md:p-6">
             <Code size={28} className="hidden shrink-0 text-blue-400 sm:block" />
             <p className="text-2xl font-black md:text-3xl">歡迎加入逢甲資訊系 IECS</p>
             <Rocket size={28} className="hidden shrink-0 text-yellow-400 sm:block" />
