@@ -1,4 +1,4 @@
-import { AtSign, Building2, Code, ExternalLink, Globe2, HelpCircle, MapPin, QrCode, Rocket, UserRound } from 'lucide-react'
+import { AtSign, Building2, Code, ExternalLink, Globe2, HelpCircle, MapPin, Rocket, UserRound } from 'lucide-react'
 import fcuIecsQr from '../assets/handbook/fcu-iecs-qr.png'
 
 const contacts = [
@@ -20,6 +20,7 @@ const contacts = [
     detail: 'ig：@fcu_iecs',
     href: 'https://instagram.com/fcu_iecs',
     subDetail: '辦公室：逢甲大學資訊電機館 B30',
+    qr: fcuIecsQr,
   },
   {
     icon: Globe2,
@@ -99,28 +100,23 @@ function ContactSection() {
                             {contact.subDetail}
                           </p>
                         )}
+                        {contact.qr && (
+                          <div className="mt-4 flex flex-wrap items-center gap-4 rounded-md border-2 border-zinc-950 bg-white p-3 shadow-[3px_3px_0_#18181b]">
+                            <img
+                              src={contact.qr}
+                              alt="FCU_IECS 系學會 Instagram QR Code"
+                              className="w-24 shrink-0 rounded-md border-2 border-zinc-950 bg-white"
+                            />
+                            <p className="min-w-0 flex-1 text-sm font-bold leading-6 text-zinc-700">
+                              掃描 QR Code，或點選上方 ig 連結前往系學會 IG。
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </article>
                 )
               })}
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-5 rounded-lg border-4 border-zinc-950 bg-[#ffe993] p-5 shadow-[5px_5px_0_#18181b] md:grid-cols-[180px_1fr] md:items-center md:p-6">
-            <img
-              src={fcuIecsQr}
-              alt="FCU_IECS 系學會 Instagram QR Code"
-              className="mx-auto w-32 rounded-md border-4 border-zinc-950 bg-white md:w-36"
-            />
-            <div>
-              <h3 className="flex items-center gap-2 text-2xl font-black">
-                <QrCode size={26} />
-                追蹤系學會 IG
-              </h3>
-              <p className="mt-3 text-base font-bold leading-8 text-zinc-800 md:text-lg">
-                活動公告、系學會消息與新生提醒會陸續發布在系學會 IG。可以掃描 QR Code，或點選上方「ig：@fcu_iecs」直接前往。
-              </p>
             </div>
           </div>
 
