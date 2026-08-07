@@ -4,7 +4,7 @@ function TransportSection() {
   return (
     <section id="transport" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="motion-reveal lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
+        <div className="motion-reveal rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
             <Compass size={18} />
             Guide

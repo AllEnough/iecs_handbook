@@ -5,7 +5,7 @@ function AboutSection() {
   return (
     <section id="student-association" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="motion-reveal lift-card grid gap-6 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-10 md:p-8">
+        <div className="motion-reveal grid gap-6 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-10 md:p-8">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#dff0ff] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
               <UsersRound size={18} />

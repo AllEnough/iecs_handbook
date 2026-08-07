@@ -6,7 +6,7 @@ function CampSection() {
   return (
     <section id="camp" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="motion-reveal lift-card grid gap-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-10 md:p-8">
+        <div className="motion-reveal grid gap-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-10 md:p-8">
           <div className="photo-frame order-2 overflow-hidden rounded-md border-4 border-zinc-950 bg-gray-200 shadow-[6px_6px_0_#18181b] md:order-1">
             <img
               src={campPhoto}
