@@ -48,7 +48,7 @@ function CampusGuideSection() {
   return (
     <section id="campus-guide" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="lift-card rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:p-8">
+        <div className="motion-reveal rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <div className="grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-start md:gap-10">
             <div>
               <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-white px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
