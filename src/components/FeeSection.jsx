@@ -127,9 +127,9 @@ function FeeSection() {
                 <button
                   type="button"
                   onClick={() => setIsPaymentGuideOpen(true)}
-                  className="mt-6 hidden items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b] lg:flex"
+                  className="mt-5 hidden w-fit items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-2 text-base font-black shadow-[2px_2px_0_#18181b] transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#18181b] lg:flex"
                 >
-                  <Eye size={22} />
+                  <Eye size={18} />
                   查看繳費範例
                 </button>
               </div>
@@ -188,9 +188,9 @@ function FeeSection() {
             <button
               type="button"
               onClick={() => setIsPaymentGuideOpen(true)}
-              className="mt-6 flex md:hidden items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
+              className="mt-6 flex items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-2.5 text-base font-black shadow-[2px_2px_0_#18181b] transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#18181b] md:hidden"
             >
-              <Eye size={22} />
+              <Eye size={18} />
               查看繳費範例
             </button>
           </div>
