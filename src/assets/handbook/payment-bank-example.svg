@@ -20,10 +20,11 @@
   <text x="342" y="352" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">700 - **** **** ****</text>
 
   <text x="48" y="388" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#52525b">收款帳號</text>
-  <text x="342" y="388" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">0021256 0893462</text>
+  <text x="342" y="388" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">700-00212560893462</text>
 
   <text x="48" y="424" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#52525b">收款戶名</text>
-  <text x="342" y="424" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">逢甲資工系學會</text>
+  <text x="342" y="418" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="13" fill="#18181b">逢甲大學資訊工程系</text>
+  <text x="342" y="438" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="13" fill="#18181b">系學會歐俊緯</text>
 
   <rect x="44" y="451" width="302" height="38" rx="4" fill="#fff2a8" stroke="#18181b" stroke-width="2"/>
   <text x="58" y="475" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="800" fill="#18181b">備註欄：班級/姓名 EX.一甲歐俊緯</text>

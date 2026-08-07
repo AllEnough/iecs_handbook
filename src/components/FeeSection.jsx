@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { BadgeDollarSign, CheckCircle2, CreditCard, Eye, MapPin, Wallet, X } from 'lucide-react'
 import bankTransferExample from '../assets/handbook/payment-bank-example.svg'
-import paymentSlipExample from '../assets/handbook/payment-slip-example.svg'
+import paymentSlipExample from '../assets/handbook/payment-slip-example.jpg'
 
 const plans = [
   {
