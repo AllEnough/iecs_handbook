@@ -1,4 +1,7 @@
-import { BadgeDollarSign, CheckCircle2, CreditCard, MapPin, Wallet } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { BadgeDollarSign, CheckCircle2, CreditCard, Eye, MapPin, Wallet, X } from 'lucide-react'
+import bankTransferExample from '../assets/handbook/payment-bank-example.svg'
+import paymentSlipExample from '../assets/handbook/payment-slip-example.svg'
 
 const plans = [
   {
@@ -23,6 +26,24 @@ const benefits = [
 ]
 
 function FeeSection() {
+  const [isPaymentGuideOpen, setIsPaymentGuideOpen] = useState(false)
+
+  const closePaymentGuide = () => setIsPaymentGuideOpen(false)
+
+  useEffect(() => {
+    if (!isPaymentGuideOpen) return undefined
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closePaymentGuide()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isPaymentGuideOpen])
+
   return (
     <section id="fee" className="scroll-mt-28 px-5 py-14 md:px-8">
       <div className="mx-auto max-w-6xl">
@@ -103,12 +124,14 @@ function FeeSection() {
                 <p className="mt-2 text-sm font-bold text-zinc-600">
                   以下資訊為系會費繳費方式，若有更新請以系學會公告為準。
                 </p>
-                <a
-                  href="#contact"
+                <button
+                  type="button"
+                  onClick={() => setIsPaymentGuideOpen(true)}
                   className="mt-6 hidden items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b] lg:flex"
                 >
-                  前往聯絡我們
-                </a>
+                  <Eye size={22} />
+                  查看繳費範例
+                </button>
               </div>
 
               <div className="mt-5 min-w-0 space-y-6 text-base font-bold leading-7 text-zinc-800 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 lg:mt-0 lg:flex-1 xl:grid-cols-[0.9fr_1.1fr]">
@@ -162,15 +185,91 @@ function FeeSection() {
               </div>
             </div>
 
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={() => setIsPaymentGuideOpen(true)}
               className="mt-6 flex md:hidden items-center justify-center gap-2 rounded-lg border-4 border-zinc-950 bg-[#ffe993] py-3 text-lg font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b]"
             >
-              前往聯絡我們
-            </a>
+              <Eye size={22} />
+              查看繳費範例
+            </button>
           </div>
         </div>
       </div>
+
+      {isPaymentGuideOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4 backdrop-blur-sm"
+          role="presentation"
+          onClick={closePaymentGuide}
+        >
+          <div
+            className="max-h-[88vh] w-full max-w-5xl overflow-y-auto rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b]"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="payment-guide-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b-4 border-zinc-950 bg-[#ffe993] p-4">
+              <div>
+                <p className="text-sm font-black text-zinc-600">系會費繳費資訊</p>
+                <h3 id="payment-guide-title" className="text-2xl font-black">
+                  繳費方式範例
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={closePaymentGuide}
+                aria-label="關閉繳費方式範例"
+                autoFocus
+                className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-white hover:bg-zinc-100"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="space-y-5 p-5 md:p-6">
+              <p className="rounded-md border-2 border-zinc-950 bg-[#e8f4ff] p-4 text-sm font-bold leading-7 text-zinc-800 shadow-[3px_3px_0_#18181b] md:text-base">
+                以下圖片為填寫位置示意，實際畫面可能因銀行 App 或郵局單據版本而不同。請務必確認轉帳備註欄或匯款單備註欄有填寫
+                <span className="mx-1 inline-block bg-[#ffe993] px-1 font-black">班級/姓名</span>
+                ，方便系學會對帳。
+              </p>
+
+              <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
+                <article className="rounded-lg border-4 border-zinc-950 bg-white p-4 shadow-[5px_5px_0_#18181b]">
+                  <h4 className="flex items-center gap-2 text-xl font-black text-blue-600">
+                    <CreditCard size={22} />
+                    網路銀行 / ATM 轉帳
+                  </h4>
+                  <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
+                    確認收款帳號、金額與備註欄後，再送出交易。
+                  </p>
+                  <img
+                    src={bankTransferExample}
+                    alt="網路銀行轉帳確認示意圖，標示備註欄需填寫班級與姓名"
+                    className="mx-auto mt-4 max-h-[560px] w-full max-w-sm rounded-md border-2 border-zinc-950 bg-zinc-50 object-contain"
+                  />
+                </article>
+
+                <article className="rounded-lg border-4 border-zinc-950 bg-white p-4 shadow-[5px_5px_0_#18181b]">
+                  <h4 className="flex items-center gap-2 text-xl font-black text-blue-600">
+                    <Wallet size={22} />
+                    紙本匯款單
+                  </h4>
+                  <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
+                    綠色框填個人資料，藍色框填班級與姓名。
+                  </p>
+                  <img
+                    src={paymentSlipExample}
+                    alt="郵局匯款單填寫範例，標示個人資料與備註欄位置"
+                    className="mt-4 w-full rounded-md border-2 border-zinc-950 bg-zinc-50 object-contain"
+                  />
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="720" viewBox="0 0 390 720" role="img" aria-labelledby="title desc">
+  <title id="title">網路銀行轉帳確認示意圖</title>
+  <desc id="desc">示意網路銀行轉帳畫面中金額、帳號、收款戶名與備註欄的位置。</desc>
+  <rect width="390" height="720" fill="#f7f7f7"/>
+  <rect x="0" y="0" width="390" height="64" fill="#ffffff"/>
+  <text x="195" y="39" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="18" font-weight="700" fill="#18181b">轉帳確認</text>
+  <path d="M27 24 L17 34 L27 44" fill="none" stroke="#18181b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="28" y="98" width="334" height="404" rx="6" fill="#ffffff" stroke="#ff4f8b" stroke-width="3"/>
+  <rect x="28" y="98" width="334" height="56" rx="6" fill="#ff4f8b"/>
+  <rect x="28" y="144" width="334" height="10" fill="#ff4f8b"/>
+  <text x="195" y="134" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">再次確認您的資料</text>
+
+  <text x="195" y="209" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="19" font-weight="700" fill="#18181b">轉出金額</text>
+  <text x="195" y="241" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="30" font-weight="800" fill="#18181b">TWD 2,500</text>
+  <text x="195" y="270" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="14" fill="#a1a1aa">請確認金額與帳戶資料</text>
+  <line x1="48" y1="310" x2="342" y2="310" stroke="#e4e4e7" stroke-width="2"/>
+
+  <text x="48" y="352" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#52525b">付款帳號</text>
+  <text x="342" y="352" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">700 - **** **** ****</text>
+
+  <text x="48" y="388" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#52525b">收款帳號</text>
+  <text x="342" y="388" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">0021256 0893462</text>
+
+  <text x="48" y="424" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#52525b">收款戶名</text>
+  <text x="342" y="424" text-anchor="end" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" fill="#18181b">逢甲資工系學會</text>
+
+  <rect x="44" y="451" width="302" height="38" rx="4" fill="#fff2a8" stroke="#18181b" stroke-width="2"/>
+  <text x="58" y="475" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="15" font-weight="800" fill="#18181b">備註欄：班級/姓名 EX.一甲歐俊緯</text>
+
+  <text x="195" y="542" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="14" font-weight="700" fill="#52525b">請務必確認備註欄有填寫班級與姓名，方便系學會對帳。</text>
+
+  <rect x="28" y="628" width="152" height="44" rx="4" fill="#d4d4d8"/>
+  <text x="104" y="656" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">取消</text>
+  <rect x="210" y="628" width="152" height="44" rx="4" fill="#ff4f8b"/>
+  <text x="286" y="656" text-anchor="middle" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">確認送出</text>
+</svg>
