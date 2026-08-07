@@ -31,7 +31,7 @@ function CampSection() {
             </p>
 
             <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
-              不管你是活潑外向，還是害羞慢熱的同學，宿營都會是豐富你們學生活的重要活動！詳細資訊可以追蹤我們的IG帳號！！歡迎你們一起來參加！
+              不管你是活潑外向，還是害羞慢熱的同學，宿營都會是豐富你們學生生活的重要活動！詳細資訊可以追蹤我們的 IG 帳號！！歡迎你們一起來參加！
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
@@ -54,7 +54,7 @@ function CampSection() {
                 <img
                   src={campIgQr}
                   alt="115.fcu.7camping 迎新宿營 Instagram QR Code"
-                  className="mx-auto w-32 rounded-md border-2 border-zinc-950 bg-white sm:w-full"
+                  className="mx-auto w-28 rounded-md border-2 border-zinc-950 bg-white sm:w-full"
                 />
                 <div>
                   <h3 className="flex items-center gap-2 text-base font-black">
@@ -62,7 +62,7 @@ function CampSection() {
                     掃描 QR Code 追蹤宿營 IG
                   </h3>
                   <p className="mt-2 text-sm font-medium leading-6 text-zinc-700">
-                    最新報名、活動提醒與公告會以官方貼文為準，也可以直接點上方 IG 連結前往。
+                    報名與費用相關資訊公布後，會同步更新於活動 IG。也可以直接點上方 IG 連結前往。
                   </p>
                 </div>
               </div>

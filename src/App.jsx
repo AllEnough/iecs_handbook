@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowUp, ChevronRight, Code2, Menu, Sparkles, X } from 'lucide-react'
 import AboutSection from './components/AboutSection'
 import CampusGuideSection from './components/CampusGuideSection'
@@ -14,11 +14,27 @@ const navItems = [
   { label: '迎新宿營', href: '#camp' },
   { label: '系會費', href: '#fee' },
   { label: '聯絡我們', href: '#contact' },
-  { label: 'Extra', href: '#schedule' },
+  { label: '活動與福利', href: '#schedule' },
 ]
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const targetId = decodeURIComponent(window.location.hash.slice(1))
+
+      if (!targetId) return
+
+      document.getElementById(targetId)?.scrollIntoView()
+    }
+
+    window.setTimeout(scrollToHash, 0)
+    window.setTimeout(scrollToHash, 300)
+    window.addEventListener('hashchange', scrollToHash)
+
+    return () => window.removeEventListener('hashchange', scrollToHash)
+  }, [])
 
   return (
     <main className="min-h-screen bg-[#fff8e8] text-zinc-950">
@@ -95,7 +111,7 @@ function App() {
 
           <h1 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
             <span className="block">歡迎加入逢甲大學</span>
-            <span className="block">資訊工程學系IECS!</span>
+            <span className="block">資訊工程學系 IECS！</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-zinc-800 md:text-xl md:leading-9">
@@ -138,7 +154,7 @@ function App() {
                 <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
               </li>
               <li>
-                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動預告與校園指南</a>
+                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動與福利</a>
               </li>
             </ul>
           </div>

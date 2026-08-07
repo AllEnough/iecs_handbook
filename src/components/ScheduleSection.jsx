@@ -27,6 +27,8 @@ const events = [
     date: '5月初',
     title: '資訊之夜',
     note: '一學年很快就要結束了，讓我們為自己這一年的付出做一個小小的總結。系學會要來回饋系上，誠心邀請系上的大家一起來同歡共樂。',
+    image: infoNightPhoto,
+    imageAlt: '資訊之夜活動合照',
   },
 ]
 
@@ -42,7 +44,7 @@ function ScheduleSection() {
             </p>
 
             <h2 className="text-3xl font-black leading-tight md:text-5xl">
-              Extra | 活動預告與福利
+              Extra | 活動與福利
             </h2>
           </div>
 
@@ -82,32 +84,29 @@ function ScheduleSection() {
                   <p className="mt-4 text-base font-medium leading-7 text-zinc-800">
                     {event.note}
                   </p>
+                  {event.image && (
+                    <div className="mt-4 overflow-hidden rounded-md border-2 border-zinc-950 bg-white shadow-[3px_3px_0_#18181b]">
+                      <img
+                        src={event.image}
+                        alt={event.imageAlt}
+                        className="aspect-video h-full w-full object-cover"
+                      />
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
           </div>
 
           <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-[#ffe993] p-5 shadow-[5px_5px_0_#18181b]">
-            <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-              <div className="overflow-hidden rounded-md border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
-                <img
-                  src={infoNightPhoto}
-                  alt="資訊之夜活動合照"
-                  className="aspect-video h-full w-full object-cover"
-                />
-              </div>
+            <h3 className="flex items-center gap-2 text-2xl font-black">
+              <Gift size={26} />
+              學生福利
+            </h3>
 
-              <div>
-                <h3 className="flex items-center gap-2 text-2xl font-black">
-                  <Gift size={26} />
-                  學生福利
-                </h3>
-
-                <p className="mt-5 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
-                  系學會與逢甲 Straight A 特約商店合作：逢甲資訊工程學系學生在 115 學年度可享副廠商品 8 折優惠（音頻與軟體商品除外）。另外也會有不定時團購與線上課程資訊，詳細內容請以系學會公告為準。
-                </p>
-              </div>
-            </div>
+            <p className="mt-5 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
+              系學會與逢甲 Straight A 特約商店合作：逢甲資訊工程學系學生在 115 學年度可享副廠商品 8 折優惠（音頻與軟體商品除外）。另外也會有不定時團購與線上課程資訊，詳細內容請以系學會公告為準。
+            </p>
           </div>
         </div>
       </div>

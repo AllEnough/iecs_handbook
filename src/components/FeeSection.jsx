@@ -34,7 +34,8 @@ function FeeSection() {
             </p>
 
             <h2 className="text-3xl font-black leading-tight md:text-5xl">
-              Mission 03 | 系會費與會員福利
+              <span className="block">Mission 03 |</span>
+              <span className="block">系會費與會員福利</span>
             </h2>
           </div>
 
@@ -131,7 +132,7 @@ function FeeSection() {
                     <ol className="mt-2 ml-5 list-decimal space-y-1 text-sm font-medium md:text-base">
                       <li>將系會費轉帳至系學會帳戶</li>
                       <li>
-                        <span className="block">轉帳備注欄填寫</span>
+                        <span className="block">轉帳備註欄填寫</span>
                         <span className="block">
                           <span className="inline-block bg-[#ffe993] px-1 font-bold">班級/姓名</span> EX.一甲歐俊緯
                         </span>

@@ -103,7 +103,7 @@ function ContactSection() {
             <img
               src={fcuIecsQr}
               alt="FCU_IECS 系學會 Instagram QR Code"
-              className="mx-auto w-40 rounded-md border-4 border-zinc-950 bg-white"
+              className="mx-auto w-32 rounded-md border-4 border-zinc-950 bg-white md:w-36"
             />
             <div>
               <h3 className="flex items-center gap-2 text-2xl font-black">

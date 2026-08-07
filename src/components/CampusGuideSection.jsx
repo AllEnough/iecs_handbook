@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Map, School, Sparkles, X, Landmark, BookOpen, Monitor, Dumbbell, Building2 } from 'lucide-react'
 import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
 import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
@@ -28,6 +28,22 @@ const abbreviations = [
 
 function CampusGuideSection() {
   const [selectedBuilding, setSelectedBuilding] = useState(null)
+
+  const closeModal = () => setSelectedBuilding(null)
+
+  useEffect(() => {
+    if (!selectedBuilding) return undefined
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeModal()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedBuilding])
 
   return (
     <section id="campus-guide" className="scroll-mt-28 px-5 py-14 md:px-8">
@@ -97,10 +113,20 @@ function CampusGuideSection() {
 
       {/* Modal for Building Detail */}
       {selectedBuilding && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-5 backdrop-blur-sm">
-          <div className="w-full max-w-sm rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b]">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-5 backdrop-blur-sm"
+          role="presentation"
+          onClick={closeModal}
+        >
+          <div
+            className="w-full max-w-sm rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b]"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="building-detail-title"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="flex items-center justify-between border-b-4 border-zinc-950 bg-[#ffe993] p-4">
-              <h3 className="flex items-center gap-2 text-xl font-black">
+              <h3 id="building-detail-title" className="flex items-center gap-2 text-xl font-black">
                 {selectedBuilding.icon && (() => {
                   const Icon = selectedBuilding.icon;
                   return <Icon size={22} />;
@@ -108,7 +134,9 @@ function CampusGuideSection() {
                 <span>{selectedBuilding.shortName} - {selectedBuilding.fullName}</span>
               </h3>
               <button
-                onClick={() => setSelectedBuilding(null)}
+                onClick={closeModal}
+                aria-label="關閉建築介紹"
+                autoFocus
                 className="grid h-8 w-8 place-items-center rounded-full border-2 border-zinc-950 bg-white hover:bg-zinc-100"
               >
                 <X size={18} />
