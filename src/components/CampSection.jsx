@@ -50,7 +50,7 @@ function CampSection() {
                   @115.fcu.7camping
                 </a>
               </div>
-              <div className="grid gap-4 rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] sm:grid-cols-[120px_1fr] sm:items-center">
+              <div className="hidden gap-4 rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] sm:grid sm:grid-cols-[120px_1fr] sm:items-center">
                 <img
                   src={campIgQr}
                   alt="115.fcu.7camping 迎新宿營 Instagram QR Code"
