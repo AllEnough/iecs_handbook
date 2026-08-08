@@ -238,9 +238,16 @@ function SportsTeamSection() {
                     <UsersRound size={26} />
                     資訊系籃
                   </h3>
-                  <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
-                    系籃的完整介紹文案準備中。想先了解練球、比賽或加入方式，可以追蹤系籃 IG，後續有新資訊也會陸續更新。
-                  </p>
+                  <div className="mt-4 space-y-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
+                    <p>大學生活不只在教室，也可以在球場上留下屬於自己的回憶！</p>
+                    <p>
+                      資訊系籃是一群因為喜歡籃球而聚在一起的人。平常我們一起練球、切磋球技，也會代表資訊系參加系際盃、院際盃等各種比賽，在一次次練習和比賽中培養屬於我們的默契。
+                    </p>
+                    <p>
+                      不用擔心自己不夠強，也不需要有豐富的比賽經驗，只要你喜歡籃球、想打球，或只是想在課業之外找到一群能一起流汗、一起進步的朋友，都歡迎來到資訊系籃！
+                    </p>
+                    <p>穿上球衣、走上球場，下一場比賽，也許就有你的身影。</p>
+                  </div>
                   <a
                     href="https://www.instagram.com/fcu_iecs.bb?igsh=MTZlOXRnZjhhOWl6Mw=="
                     target="_blank"
