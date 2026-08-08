@@ -179,6 +179,15 @@ function SportsTeamSection() {
                   <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                     不想大學四年只有寫程式和統籌考嗎？歡迎加入資工系排！在這裡，我們不只是一支球隊，更是你在大學最強的後盾。不管你以前有沒有碰過排球，球隊裡有耐心的學長姐從零開始手把手帶你練起；也有迎新、送舊、友誼賽等例行活動，學長姐們還可以為各位在課業、教授評價到校園宵夜推薦上給予極大的建議，讓大家迅速適應大學生活。歡迎大家加入資工系排～
                   </p>
+                  <a
+                    href="https://www.instagram.com/fcu_iecs_vb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
+                  >
+                    <AtSign size={18} />
+                    系排 IG：@fcu_iecs_vb
+                  </a>
                 </div>
 
                 <div className="mt-5 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
