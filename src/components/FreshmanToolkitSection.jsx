@@ -119,7 +119,7 @@ function FreshmanToolkitSection() {
               </h3>
 
               <p className="mt-4 text-base font-bold leading-8 text-zinc-800">
-                以下僅整理 115 學年度上學期新生較常用到的日期，完整一整學年度內容請點選官方 PDF 查看。
+                以下僅整理 115 學年度上學期新生較常用到的日期，完整一整學年度內容請點選下方PDF 查看。
               </p>
 
               <div className="mt-5 grid gap-3">
