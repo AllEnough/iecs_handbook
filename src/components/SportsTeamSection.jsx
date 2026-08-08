@@ -72,7 +72,7 @@ const womensVolleyballPhotos = [
     src: womensVolleyballPractice,
     alt: '逢甲資工系女排球場練習合照',
     className: '',
-    imageClassName: 'aspect-[4/5] object-[center_72%]',
+    imageClassName: 'aspect-[5/4] object-center',
   },
 ]
 
