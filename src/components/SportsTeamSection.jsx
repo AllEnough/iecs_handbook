@@ -30,20 +30,14 @@ const teamPhotos = [
   {
     src: volleyballChampion,
     alt: '逢甲資工系男排比賽得獎合照',
-    className: 'lg:col-span-2',
-    imageClassName: 'h-[170px] md:h-[190px] lg:h-full',
   },
   {
     src: volleyballOuting,
     alt: '逢甲資工系排出遊合照',
-    className: 'lg:row-span-2',
-    imageClassName: 'h-[260px] md:h-[360px] lg:h-full',
   },
   {
     src: volleyballGathering,
     alt: '逢甲資工系排聚會大合照',
-    className: '',
-    imageClassName: 'h-[170px] md:h-[190px] lg:h-full',
   },
 ]
 
@@ -57,13 +51,13 @@ function SportsTeamSection() {
             Bonus 02
           </p>
 
-          <h2 className="text-3xl font-black leading-tight md:text-5xl">
-            Bonus 02 | 系隊介紹
-          </h2>
-
-          <div className="mt-6 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+          <div className="mt-4 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
             <div>
-              <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+              <h2 className="text-3xl font-black leading-tight md:text-5xl">
+                Bonus 02 | 系隊介紹
+              </h2>
+
+              <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
                 <h3 className="flex items-center gap-2 text-2xl font-black">
                   <UsersRound size={26} />
                   逢甲資工系男排
@@ -104,17 +98,17 @@ function SportsTeamSection() {
               </div>
             </div>
 
-            <div className="grid gap-3 lg:grid-cols-2 lg:grid-rows-[1fr_1fr_1fr]">
+            <div className="grid gap-3 lg:grid-rows-3">
               {teamPhotos.map((photo) => (
                 <figure
                   key={photo.alt}
-                  className={`photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b] ${photo.className}`}
+                  className="photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b]"
                 >
                   <img
                     src={photo.src}
                     alt={photo.alt}
                     loading="lazy"
-                    className={`${photo.imageClassName} w-full object-cover`}
+                    className="h-[170px] w-full object-cover md:h-[190px] lg:h-full"
                   />
                 </figure>
               ))}
