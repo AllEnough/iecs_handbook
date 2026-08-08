@@ -34,6 +34,8 @@ function CampusGuideSection() {
   useEffect(() => {
     if (!selectedBuilding) return undefined
 
+    document.body.classList.add('modal-open')
+
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         closeModal()
@@ -42,7 +44,10 @@ function CampusGuideSection() {
 
     window.addEventListener('keydown', handleKeyDown)
 
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      document.body.classList.remove('modal-open')
+    }
   }, [selectedBuilding])
 
   return (
