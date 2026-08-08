@@ -107,7 +107,7 @@ function SportsTeamSection() {
               </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2 lg:mt-20">
               {teamPhotos.map((photo) => (
                 <figure
                   key={photo.caption}
