@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Map, School, Sparkles, X, Landmark, BookOpen, Monitor, Dumbbell, Building2 } from 'lucide-react'
+import { ExternalLink, Map, School, Sparkles, X, Landmark, BookOpen, Monitor, Dumbbell, Building2 } from 'lucide-react'
 import campusMapLandscape from '../assets/handbook/campus-map-landscape.jpg'
 import campusMapPortrait from '../assets/handbook/campus-map-portrait.jpg'
 
@@ -72,6 +72,25 @@ function CampusGuideSection() {
               <div className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] md:text-base">
                 <School size={20} className="shrink-0" />
                 <span>教室代號如「商207」，即代表商學大樓2樓207教室。</span>
+              </div>
+
+              <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
+                <h3 className="flex items-center gap-2 text-xl font-black">
+                  <Building2 size={24} />
+                  半導體學院與資電館整修
+                </h3>
+                <p className="mt-3 text-sm font-bold leading-7 text-zinc-800 md:text-base">
+                  逢甲大學預計於 116 學年度成立半導體學院，學校也持續推動半導體、資電與產業實務相關教學資源。近期如果看到資電館周邊正在整修，不用太困惑；這和校園空間調整及半導體相關人才培育規劃有關。9/8 開學時部分區域可能仍在施工，經過時請注意動線與安全，實際開放情況請以學校公告為準。
+                </p>
+                <a
+                  href="https://www.fcu.edu.tw/fcuweekly/news-detail/?id=51241&lang=zh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pressable mt-4 inline-flex items-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b]"
+                >
+                  查看逢甲週報
+                  <ExternalLink size={16} />
+                </a>
               </div>
             </div>
 
