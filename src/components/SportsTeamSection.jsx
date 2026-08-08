@@ -1,4 +1,6 @@
 import { AtSign, Dumbbell, HeartHandshake, Trophy, UsersRound } from 'lucide-react'
+import basketballGame from '../assets/handbook/basketball-game.jpg'
+import basketballTeam from '../assets/handbook/basketball-team.jpg'
 import volleyballOuting from '../assets/handbook/volleyball-outing.jpg'
 import volleyballChampion from '../assets/handbook/volleyball-champion.jpg'
 import volleyballGathering from '../assets/handbook/volleyball-gathering.jpg'
@@ -40,6 +42,19 @@ const teamPhotos = [
   {
     src: volleyballGathering,
     alt: '逢甲資工系排聚會大合照',
+    imageClassName: 'object-center',
+  },
+]
+
+const basketballPhotos = [
+  {
+    src: basketballTeam,
+    alt: '逢甲資工系籃活動大合照',
+    imageClassName: 'object-center',
+  },
+  {
+    src: basketballGame,
+    alt: '逢甲資工系籃比賽合照',
     imageClassName: 'object-center',
   },
 ]
@@ -115,6 +130,47 @@ function SportsTeamSection() {
                   />
                 </figure>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-10 border-t-4 border-zinc-950 pt-8">
+            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+              <div>
+                <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+                  <h3 className="flex items-center gap-2 text-2xl font-black">
+                    <UsersRound size={26} />
+                    逢甲資工系籃
+                  </h3>
+                  <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
+                    系籃的完整介紹文案準備中。想先了解練球、比賽或加入方式，可以追蹤系籃 IG，後續有新資訊也會陸續更新。
+                  </p>
+                  <a
+                    href="https://www.instagram.com/fcu_iecs.bb?igsh=MTZlOXRnZjhhOWl6Mw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
+                  >
+                    <AtSign size={18} />
+                    系籃 IG：@fcu_iecs.bb
+                  </a>
+                </div>
+              </div>
+
+              <div className="grid gap-3">
+                {basketballPhotos.map((photo) => (
+                  <figure
+                    key={photo.alt}
+                    className="photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b]"
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className={`aspect-[16/9] h-full w-full object-cover ${photo.imageClassName}`}
+                    />
+                  </figure>
+                ))}
+              </div>
             </div>
           </div>
         </div>
