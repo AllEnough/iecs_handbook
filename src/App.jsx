@@ -7,6 +7,7 @@ import ContactSection from './components/ContactSection'
 import FeeSection from './components/FeeSection'
 import FreshmanToolkitSection from './components/FreshmanToolkitSection'
 import ScheduleSection from './components/ScheduleSection'
+import SportsTeamSection from './components/SportsTeamSection'
 import TransportSection from './components/TransportSection'
 import iecsLogo from './assets/handbook/iecs-logo.png'
 
@@ -16,6 +17,7 @@ const navItems = [
   { label: '系會費', href: '#fee' },
   { label: '聯絡我們', href: '#contact' },
   { label: '活動與福利', href: '#schedule' },
+  { label: '系隊介紹', href: '#sports-team' },
   { label: '實用工具', href: '#freshman-toolkit' },
 ]
 
@@ -56,12 +58,12 @@ function App() {
             IECS 新生手冊
           </a>
 
-          <div className="hidden items-center gap-4 lg:gap-6 md:flex">
+          <div className="hidden items-center gap-3 lg:gap-5 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-xs font-bold transition hover:-translate-y-0.5 hover:text-blue-600 lg:text-sm"
+                className="text-[11px] font-bold transition hover:-translate-y-0.5 hover:text-blue-600 lg:text-sm"
               >
                 {item.label}
               </a>
@@ -161,6 +163,9 @@ function App() {
                 <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動與福利</a>
               </li>
               <li>
+                <a href="#sports-team" className="transition hover:text-blue-600 hover:underline">Extra | 系隊介紹</a>
+              </li>
+              <li>
                 <a href="#freshman-toolkit" className="transition hover:text-blue-600 hover:underline">Extra | 新生實用工具包</a>
               </li>
             </ul>
@@ -173,6 +178,7 @@ function App() {
       <FeeSection />
       <ContactSection />
       <ScheduleSection />
+      <SportsTeamSection />
       <FreshmanToolkitSection />
       <TransportSection />
       <CampusGuideSection />
