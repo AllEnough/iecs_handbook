@@ -149,9 +149,12 @@ function ScheduleSection() {
             </p>
 
             <div className="mt-5 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[4px_4px_0_#18181b]">
-              <h4 className="flex items-center gap-2 text-xl font-black">
-                <Store size={22} />
-                🍎 Straight A 逢甲大學校園門市
+              <h4 className="flex items-start gap-3 text-xl font-black leading-tight">
+                <Store size={22} className="mt-1 shrink-0" />
+                <span>
+                  <span className="block sm:inline">🍎 Straight A</span>
+                  <span className="block sm:inline sm:ml-1">逢甲大學校園門市</span>
+                </span>
               </h4>
 
               <p className="mt-3 text-base font-bold leading-8 text-zinc-800">
