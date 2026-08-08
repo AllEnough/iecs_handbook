@@ -1,4 +1,4 @@
-import { AtSign, Camera, Dumbbell, HeartHandshake, Trophy, UsersRound } from 'lucide-react'
+import { AtSign, Dumbbell, HeartHandshake, Trophy, UsersRound } from 'lucide-react'
 import volleyballOuting from '../assets/handbook/volleyball-outing.jpg'
 import volleyballChampion from '../assets/handbook/volleyball-champion.jpg'
 import volleyballGathering from '../assets/handbook/volleyball-gathering.jpg'
@@ -30,17 +30,14 @@ const teamPhotos = [
   {
     src: volleyballChampion,
     alt: '逢甲資工系男排比賽得獎合照',
-    caption: '比賽與團隊榮耀',
   },
   {
     src: volleyballOuting,
     alt: '逢甲資工系排出遊合照',
-    caption: '球場外的聚會與出遊',
   },
   {
     src: volleyballGathering,
     alt: '逢甲資工系排聚會大合照',
-    caption: '一起聚會、認識更多朋友',
   },
 ]
 
@@ -54,13 +51,13 @@ function SportsTeamSection() {
             Bonus 02
           </p>
 
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div>
-              <h2 className="text-3xl font-black leading-tight md:text-5xl">
-                Bonus 02 | 系隊介紹
-              </h2>
+          <h2 className="text-3xl font-black leading-tight md:text-5xl">
+            Bonus 02 | 系隊介紹
+          </h2>
 
-              <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+          <div className="mt-6 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+            <div>
+              <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
                 <h3 className="flex items-center gap-2 text-2xl font-black">
                   <UsersRound size={26} />
                   逢甲資工系男排
@@ -101,22 +98,18 @@ function SportsTeamSection() {
               </div>
             </div>
 
-            <div className="grid gap-3 lg:mt-20">
+            <div className="grid gap-3 lg:grid-rows-3">
               {teamPhotos.map((photo) => (
                 <figure
-                  key={photo.caption}
+                  key={photo.alt}
                   className="photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b]"
                 >
                   <img
                     src={photo.src}
                     alt={photo.alt}
                     loading="lazy"
-                    className="h-[170px] w-full object-cover md:h-[150px]"
+                    className="h-[170px] w-full object-cover md:h-[190px] lg:h-full"
                   />
-                  <figcaption className="flex items-center gap-2 border-t-4 border-zinc-950 bg-[#ffe993] p-2 text-sm font-black">
-                    <Camera size={18} />
-                    {photo.caption}
-                  </figcaption>
                 </figure>
               ))}
             </div>
