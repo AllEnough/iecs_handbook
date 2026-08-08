@@ -45,8 +45,8 @@ const teamPhotos = [
     src: volleyballGathering,
     alt: '逢甲資工系排聚會大合照',
     caption: '一起聚會、認識更多朋友',
-    className: '',
-    imageClassName: 'aspect-[4/5] md:aspect-[4/3]',
+    className: 'md:col-span-2',
+    imageClassName: 'aspect-video',
   },
 ]
 
