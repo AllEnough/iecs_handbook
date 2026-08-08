@@ -79,17 +79,18 @@ function CampusGuideSection() {
               <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                 {abbreviations.map((item) => (
                   <button
+                    type="button"
                     key={`${item.shortName}-${item.fullName}`}
                     onClick={() => setSelectedBuilding({
                       ...item,
                       desc: item.desc || `這是${item.fullName}。學長姐將在日後為你補充更多關於這棟建築物的介紹！`
                     })}
-                    className="pressable flex flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:bg-[#ffe993] hover:shadow-[5px_5px_0_#18181b]"
+                    className="pressable flex min-h-[96px] flex-col items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-3 text-center shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:bg-[#ffe993] hover:shadow-[5px_5px_0_#18181b]"
                   >
-                    <span className="grid h-10 w-10 place-items-center rounded-full border-2 border-zinc-950 bg-white text-base font-black">
+                    <span className="grid h-11 min-w-11 place-items-center rounded-full border-2 border-zinc-950 bg-white px-2 text-sm font-black leading-none whitespace-nowrap">
                       {item.shortName}
                     </span>
-                    <span className="text-sm font-bold leading-5 text-zinc-800">
+                    <span className="flex min-h-10 items-center justify-center text-sm font-bold leading-5 text-zinc-800">
                       {item.fullName}
                     </span>
                   </button>
