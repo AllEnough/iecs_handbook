@@ -166,7 +166,7 @@ function ScheduleSection() {
                 </h4>
 
                 <p className="mt-3 text-base font-bold leading-8 text-zinc-800">
-                  Apple 教育優惠、BTS 開學季與 5G 校園資費諮詢。
+                  歡迎資訊系的同學加入逢甲大學！門市目前有Apple教育優惠、BTS開學季與5G校園資費資訊。詳情點擊下方按鈕👇🏾
                 </p>
 
                 <button
@@ -224,18 +224,21 @@ function ScheduleSection() {
                   <h4 className="text-xl font-black text-blue-600">🎓 Apple 教育優惠 × BTS 開學季</h4>
                   <ul className="mt-3 list-inside list-disc space-y-2 text-sm font-bold leading-7 text-zinc-800 md:text-base">
                     <li>📱 iPad 系列包含好禮自由選、配件優惠組合、指定信用卡分期優惠。</li>
-                    <li>💻 MacBook 系列包含開學禮、指定機型現折、AirPods 或品牌禮包等加碼優惠。</li>
+                    <li>💻 MacBook 系列包含開學禮三選一、指定機型現折、AirPods 或品牌禮包等加碼優惠。</li>
                     <li>🎓 購買前可主動告知門市人員欲使用教育優惠。</li>
                   </ul>
                 </article>
 
                 <article className="rounded-lg border-4 border-zinc-950 bg-white p-4 shadow-[4px_4px_0_#18181b]">
-                  <h4 className="text-xl font-black text-blue-600">📶 台灣大哥大 5G 校園資費</h4>
+                  <h4 className="text-xl font-black text-blue-600">📶 台灣大哥大5G校園資費方案</h4>
                   <ul className="mt-3 list-inside list-disc space-y-2 text-sm font-bold leading-7 text-zinc-800 md:text-base">
                     <li>✔ 新辦、攜碼皆可至門市諮詢申辦。</li>
                     <li>✔ 部分 Apple 產品可搭配資費享購機方案。</li>
-                    <li>✔ 若正在考慮換手機、辦新門號，可由門市協助試算方案。</li>
+                    <li>✔ 月租最低 599 元起，依方案不同可享不同購機優惠。</li>
                   </ul>
+                  <p className="mt-3 text-sm font-bold leading-7 text-zinc-800 md:text-base">
+                    若正在考慮換手機、辦新門號，或想了解搭配資費是否更划算，也歡迎到門市由專人協助試算最適合的方案。
+                  </p>
                 </article>
               </div>
 
@@ -252,8 +255,15 @@ function ScheduleSection() {
                 </p>
               </div>
 
+              <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-4 shadow-[4px_4px_0_#18181b]">
+                <h4 className="text-xl font-black">🚀 資訊系新生專屬</h4>
+                <p className="mt-3 text-sm font-bold leading-7 text-zinc-800 md:text-base">
+                  如果不知道該選 MacBook 還是 iPad、需不需要搭配電信方案，歡迎加入 LINE 或到門市諮詢，我們會依照課程需求與預算，協助推薦最適合的大學四年使用的設備。
+                </p>
+              </div>
+
               <div>
-                <h4 className="text-xl font-black">🚀 優惠海報</h4>
+                <h4 className="text-xl font-black">🖼️ 優惠海報</h4>
                 <div className="mt-4 grid gap-4 md:grid-cols-3">
                   {straightAPosters.map((poster) => (
                     <a
