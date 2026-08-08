@@ -185,19 +185,19 @@ function ScheduleSection() {
 
       {isSponsorModalOpen && (
         <div
-          className="motion-reveal fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4 backdrop-blur-sm"
+          className="motion-reveal fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/55 p-3 py-4 backdrop-blur-sm md:items-center md:p-4"
           role="presentation"
           onClick={closeSponsorModal}
         >
           <div
-            className="motion-pop max-h-[88vh] w-full max-w-5xl overflow-y-auto rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b]"
+            className="motion-pop my-2 w-full max-w-5xl rounded-lg border-4 border-zinc-950 bg-white shadow-[8px_8px_0_#18181b] md:max-h-[88vh] md:overflow-y-auto"
             role="dialog"
             aria-modal="true"
             aria-labelledby="straight-a-title"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b-4 border-zinc-950 bg-[#ffe993] p-4">
-              <div>
+            <div className="top-0 z-10 flex items-start justify-between gap-3 border-b-4 border-zinc-950 bg-[#ffe993] p-4 md:sticky">
+              <div className="min-w-0">
                 <p className="text-sm font-black text-zinc-600">學生福利</p>
                 <h3 id="straight-a-title" className="text-2xl font-black">
                   🍎 Straight A 優惠資訊
@@ -208,7 +208,7 @@ function ScheduleSection() {
                 onClick={closeSponsorModal}
                 aria-label="關閉 Straight A 優惠資訊"
                 autoFocus
-                className="pressable grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-white hover:bg-zinc-100"
+                className="pressable grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-white hover:bg-zinc-100"
               >
                 <X size={20} />
               </button>
@@ -276,6 +276,14 @@ function ScheduleSection() {
                   ))}
                 </div>
               </div>
+
+              <button
+                type="button"
+                onClick={closeSponsorModal}
+                className="pressable flex w-full items-center justify-center rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-black shadow-[3px_3px_0_#18181b] hover:bg-white"
+              >
+                關閉 Straight A 優惠資訊
+              </button>
             </div>
           </div>
         </div>
