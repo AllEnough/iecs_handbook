@@ -111,7 +111,7 @@ function ScheduleSection() {
               {events.map((event, index) => (
                 <article
                   key={event.title}
-                  className={`lift-card flex min-h-full flex-col rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] ${
+                  className={`lift-card flex flex-col self-start rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] ${
                     index === events.length - 1 ? 'md:col-span-2' : ''
                   }`}
                 >
