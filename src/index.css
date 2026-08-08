@@ -58,7 +58,7 @@ a {
 
 @media (prefers-reduced-motion: no-preference) {
   .motion-reveal {
-    animation: reveal-up 0.55s ease-out both;
+    animation: reveal-up 0.55s ease-out backwards;
   }
 
   .motion-delay-1 {
@@ -74,7 +74,7 @@ a {
   }
 
   .motion-pop {
-    animation: soft-pop 0.28s ease-out both;
+    animation: soft-pop 0.28s ease-out backwards;
   }
 
   .lift-card {
