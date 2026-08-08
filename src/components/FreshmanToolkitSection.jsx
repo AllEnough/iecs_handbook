@@ -182,7 +182,7 @@ function FreshmanToolkitSection() {
                     YouBike
                   </p>
                   <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
-                    約 7 分鐘。可搭配上方導航地圖確認路線與附近站點。
+                    約 7 分鐘。可搭配下方導航地圖確認路線與附近站點。
                   </p>
                 </div>
               </div>
