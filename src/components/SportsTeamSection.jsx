@@ -61,6 +61,24 @@ const basketballPhotos = [
   },
 ]
 
+const basketballHighlights = [
+  {
+    icon: Dumbbell,
+    title: '一起練球切磋',
+    desc: '平常一起練球、切磋球技，在球場上慢慢累積手感。',
+  },
+  {
+    icon: Trophy,
+    title: '比賽培養默契',
+    desc: '代表資訊系參加系際盃、院際盃等比賽，一起享受熱血時刻。',
+  },
+  {
+    icon: HeartHandshake,
+    title: '課業外的夥伴',
+    desc: '找一群能一起流汗、一起進步的朋友，讓大學生活更完整。',
+  },
+]
+
 const womensVolleyballPhotos = [
   {
     src: womensVolleyballChampion,
@@ -257,6 +275,27 @@ function SportsTeamSection() {
                     <AtSign size={18} />
                     系籃 IG：@fcu_iecs.bb
                   </a>
+                </div>
+
+                <div className="mt-5 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+                  {basketballHighlights.map((item) => {
+                    const Icon = item.icon
+
+                    return (
+                      <article
+                        key={item.title}
+                        className="lift-card rounded-lg border-4 border-zinc-950 bg-[#fff8e8] p-4 shadow-[4px_4px_0_#18181b]"
+                      >
+                        <h4 className="flex items-center gap-2 text-lg font-black text-blue-600">
+                          <Icon size={22} />
+                          {item.title}
+                        </h4>
+                        <p className="mt-3 text-sm font-bold leading-7 text-zinc-800">
+                          {item.desc}
+                        </p>
+                      </article>
+                    )
+                  })}
                 </div>
               </div>
 

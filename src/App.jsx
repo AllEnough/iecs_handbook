@@ -197,10 +197,10 @@ function App() {
 
       <a
         href="#top"
-        className="back-to-top pressable fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full border-4 border-zinc-950 bg-[#ffe993] text-zinc-950 shadow-[4px_4px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[6px_6px_0_#18181b] md:bottom-10 md:right-10"
+        className="back-to-top pressable fixed bottom-4 right-4 z-50 grid h-12 w-12 place-items-center rounded-full border-4 border-zinc-950 bg-[#ffe993] text-zinc-950 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-1 hover:shadow-[5px_5px_0_#18181b] md:bottom-10 md:right-10 md:h-14 md:w-14 md:shadow-[4px_4px_0_#18181b] md:hover:shadow-[6px_6px_0_#18181b]"
         aria-label="回到頂部"
       >
-        <ArrowUp size={28} strokeWidth={3} />
+        <ArrowUp className="h-6 w-6 md:h-7 md:w-7" strokeWidth={3} />
       </a>
     </main>
   )
