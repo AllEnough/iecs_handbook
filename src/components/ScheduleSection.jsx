@@ -144,31 +144,40 @@ function ScheduleSection() {
               學生福利
             </h3>
 
-            <p className="mt-5 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
-              系學會與逢甲 Straight A 特約商店合作：逢甲資訊工程學系學生在 115 學年度可享副廠商品 8 折優惠（音頻與軟體商品除外）。另外也會有不定時團購與線上課程資訊，詳細內容請以系學會公告為準。
-            </p>
+            <div className="mt-5 grid gap-4 lg:grid-cols-2">
+              <article className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[4px_4px_0_#18181b]">
+                <h4 className="flex items-center gap-2 text-xl font-black">
+                  <Gift size={22} />
+                  資訊系學生福利
+                </h4>
 
-            <div className="mt-5 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[4px_4px_0_#18181b]">
-              <h4 className="flex items-start gap-3 text-xl font-black leading-tight">
-                <Store size={22} className="mt-1 shrink-0" />
-                <span>
-                  <span className="block sm:inline">🍎 Straight A</span>
-                  <span className="block sm:inline sm:ml-1">逢甲大學校園門市</span>
-                </span>
-              </h4>
+                <p className="mt-3 text-base font-bold leading-8 text-zinc-800">
+                  逢甲資訊工程學系學生在 115 學年度可享副廠商品 8 折優惠（音頻與軟體商品除外）。另外也會有不定時團購與線上課程資訊，詳細內容請以系學會公告為準。
+                </p>
+              </article>
 
-              <p className="mt-3 text-base font-bold leading-8 text-zinc-800">
-                Straight A 提供資訊系同學 Apple 教育優惠、BTS 開學季活動、配件選購與台灣大哥大 5G 校園資費諮詢。若正在考慮 MacBook、iPad、iPhone 或校園資費方案，可以到人言大樓 1 樓門市，或透過 LINE 官方帳號詢問。
-              </p>
+              <article className="rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[4px_4px_0_#18181b]">
+                <h4 className="flex items-start gap-3 text-xl font-black leading-tight">
+                  <Store size={22} className="mt-1 shrink-0" />
+                  <span>
+                    <span className="block sm:inline">🍎 Straight A</span>
+                    <span className="block sm:inline sm:ml-1">逢甲大學校園門市</span>
+                  </span>
+                </h4>
 
-              <button
-                type="button"
-                onClick={() => setIsSponsorModalOpen(true)}
-                className="pressable mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#dff0ff] px-4 py-3 text-base font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
-              >
-                查看 Straight A 優惠詳情
-                <Store size={18} />
-              </button>
+                <p className="mt-3 text-base font-bold leading-8 text-zinc-800">
+                  Apple 教育優惠、BTS 開學季與 5G 校園資費諮詢。
+                </p>
+
+                <button
+                  type="button"
+                  onClick={() => setIsSponsorModalOpen(true)}
+                  className="pressable mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#dff0ff] px-4 py-3 text-base font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
+                >
+                  查看 Straight A 優惠詳情
+                  <Store size={18} />
+                </button>
+              </article>
             </div>
           </div>
         </div>
