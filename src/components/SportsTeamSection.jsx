@@ -194,9 +194,12 @@ function SportsTeamSection() {
                     <UsersRound size={26} />
                     資訊系女排
                   </h3>
-                  <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
-                    不想大學四年只有寫程式和統籌考嗎？歡迎加入資工系排！在這裡，我們不只是一支球隊，更是你在大學最強的後盾。不管你以前有沒有碰過排球，球隊裡有耐心的學長姐從零開始手把手帶你練起；也有迎新、送舊、友誼賽等例行活動，學長姐們還可以為各位在課業、教授評價到校園宵夜推薦上給予極大的建議，讓大家迅速適應大學生活。歡迎大家加入資工系排～
-                  </p>
+                  <div className="mt-4 space-y-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
+                    <p>不想大學四年只有寫程式和統籌考嗎？歡迎加入資訊系女排！</p>
+                    <p>
+                      不管你以前有沒有碰過排球，都有學長姐陪你從零開始練起。這裡不只是一支球隊，也會一起參加迎新、送舊、友誼賽等活動，讓你在課業之外找到一群能一起流汗、一起聊天、一起適應大學生活的夥伴。
+                    </p>
+                  </div>
                   <a
                     href="https://www.instagram.com/fcu_iecs_vb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
@@ -259,12 +262,8 @@ function SportsTeamSection() {
                   <div className="mt-4 space-y-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                     <p>大學生活不只在教室，也可以在球場上留下屬於自己的回憶！</p>
                     <p>
-                      資訊系籃是一群因為喜歡籃球而聚在一起的人。平常我們一起練球、切磋球技，也會代表資訊系參加系際盃、院際盃等各種比賽，在一次次練習和比賽中培養屬於我們的默契。
+                      資訊系籃是一群因為喜歡籃球而聚在一起的人。平常我們一起練球、切磋球技，也會代表資訊系參加系際盃、院際盃等比賽。不用擔心自己不夠強，只要你喜歡籃球、想打球，或想找一群能一起流汗、一起進步的朋友，都歡迎加入資訊系籃。
                     </p>
-                    <p>
-                      不用擔心自己不夠強，也不需要有豐富的比賽經驗，只要你喜歡籃球、想打球，或只是想在課業之外找到一群能一起流汗、一起進步的朋友，都歡迎來到資訊系籃！
-                    </p>
-                    <p>穿上球衣、走上球場，下一場比賽，也許就有你的身影。</p>
                   </div>
                   <a
                     href="https://www.instagram.com/fcu_iecs.bb?igsh=MTZlOXRnZjhhOWl6Mw=="
