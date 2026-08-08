@@ -79,7 +79,7 @@ const womensVolleyballPhotos = [
 const womensVolleyballHighlights = [
   {
     icon: Dumbbell,
-    title: '從零開始練起',
+    title: '不在乎你是不是新手',
     desc: '不管以前有沒有碰過排球，都有學長姐耐心帶著練習。',
   },
   {
@@ -113,7 +113,7 @@ function SportsTeamSection() {
               <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
                 <h3 className="flex items-center gap-2 text-2xl font-black">
                   <UsersRound size={26} />
-                  逢甲資工系男排
+                  資訊系男排
                 </h3>
                 <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                   逢甲資工系排是一個充滿熱情、溫暖且凝聚力十足的大家庭！在這裡，排球不只是運動，更是連結彼此的橋樑。無論你是想從零開始紮實鍛鍊基本功，還是懷抱著對排球的強烈熱愛，我們都非常歡迎你的加入。
@@ -174,7 +174,7 @@ function SportsTeamSection() {
                 <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
                   <h3 className="flex items-center gap-2 text-2xl font-black">
                     <UsersRound size={26} />
-                    逢甲資工系女排
+                    資訊系女排
                   </h3>
                   <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                     不想大學四年只有寫程式和統籌考嗎？歡迎加入資工系排！在這裡，我們不只是一支球隊，更是你在大學最強的後盾。不管你以前有沒有碰過排球，球隊裡有耐心的學長姐從零開始手把手帶你練起；也有迎新、送舊、友誼賽等例行活動，學長姐們還可以為各位在課業、教授評價到校園宵夜推薦上給予極大的建議，讓大家迅速適應大學生活。歡迎大家加入資工系排～
@@ -227,7 +227,7 @@ function SportsTeamSection() {
                 <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
                   <h3 className="flex items-center gap-2 text-2xl font-black">
                     <UsersRound size={26} />
-                    逢甲資工系籃
+                    資訊系籃
                   </h3>
                   <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                     系籃的完整介紹文案準備中。想先了解練球、比賽或加入方式，可以追蹤系籃 IG，後續有新資訊也會陸續更新。
