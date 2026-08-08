@@ -1,4 +1,4 @@
-import { AtSign, Dumbbell, HeartHandshake, Trophy, UsersRound } from 'lucide-react'
+import { Dumbbell, HeartHandshake, Trophy, UsersRound } from 'lucide-react'
 import volleyballOuting from '../assets/handbook/volleyball-outing.jpg'
 import volleyballChampion from '../assets/handbook/volleyball-champion.jpg'
 import volleyballGathering from '../assets/handbook/volleyball-gathering.jpg'
@@ -65,15 +65,6 @@ function SportsTeamSection() {
                 <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                   逢甲資工系排是一個充滿熱情、溫暖且凝聚力十足的大家庭！在這裡，排球不只是運動，更是連結彼此的橋樑。無論你是想從零開始紮實鍛鍊基本功，還是懷抱著對排球的強烈熱愛，我們都非常歡迎你的加入。
                 </p>
-                <a
-                  href="https://www.instagram.com/fcu_iecs_vb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
-                >
-                  <AtSign size={18} />
-                  系排 IG：@fcu_iecs_vb
-                </a>
               </div>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
