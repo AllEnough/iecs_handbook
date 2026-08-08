@@ -61,6 +61,7 @@ const straightAPosters = [
 
 function ScheduleSection() {
   const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false)
+  const regularEventCount = events.filter((event) => !event.image).length
 
   const closeSponsorModal = () => setIsSponsorModalOpen(false)
 
@@ -113,38 +114,51 @@ function ScheduleSection() {
             </h3>
 
             <div className="mt-6 grid gap-4 md:grid-cols-2">
-              {events.map((event, index) => (
-                <article
-                  key={event.title}
-                  className={`lift-card flex flex-col self-start rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] ${
-                    index === events.length - 1 ? 'md:col-span-2' : ''
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993] shadow-[2px_2px_0_#18181b]">
-                      <PartyPopper size={20} />
-                    </span>
-                    <div>
-                      <p className="text-sm font-black text-blue-600">
-                        {event.date}
-                      </p>
-                      <h4 className="mt-1 text-xl font-black">{event.title}</h4>
+              {events.map((event, index) => {
+                const regularIndex = events
+                  .slice(0, index + 1)
+                  .filter((item) => !item.image).length
+                const isLastOddRegular =
+                  !event.image &&
+                  regularEventCount % 2 === 1 &&
+                  regularIndex === regularEventCount
+                const shouldSpan = event.image || isLastOddRegular
+
+                return (
+                  <article
+                    key={event.title}
+                    className={`lift-card flex flex-col self-start rounded-lg border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] ${
+                      shouldSpan ? 'md:col-span-2' : ''
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-[#ffe993] shadow-[2px_2px_0_#18181b]">
+                        <PartyPopper size={20} />
+                      </span>
+                      <div>
+                        <p className="text-sm font-black text-blue-600">
+                          {event.date}
+                        </p>
+                        <h4 className="mt-1 text-xl font-black">
+                          {event.title}
+                        </h4>
+                      </div>
                     </div>
-                  </div>
-                  <p className="mt-4 text-base font-medium leading-7 text-zinc-800">
-                    {event.note}
-                  </p>
-                  {event.image && (
-                    <div className="photo-frame mt-4 overflow-hidden rounded-md border-2 border-zinc-950 bg-white shadow-[3px_3px_0_#18181b]">
-                      <img
-                        src={event.image}
-                        alt={event.imageAlt}
-                        className="aspect-video h-full w-full object-cover"
-                      />
-                    </div>
-                  )}
-                </article>
-              ))}
+                    <p className="mt-4 text-base font-medium leading-7 text-zinc-800">
+                      {event.note}
+                    </p>
+                    {event.image && (
+                      <div className="photo-frame mt-4 overflow-hidden rounded-md border-2 border-zinc-950 bg-white shadow-[3px_3px_0_#18181b]">
+                        <img
+                          src={event.image}
+                          alt={event.imageAlt}
+                          className="aspect-video h-full w-full object-cover"
+                        />
+                      </div>
+                    )}
+                  </article>
+                )
+              })}
             </div>
           </div>
 
