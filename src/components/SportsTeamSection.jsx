@@ -57,13 +57,13 @@ function SportsTeamSection() {
         <div className="motion-reveal rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
             <Trophy size={18} />
-            Extra
+            Bonus 02
           </p>
 
           <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
               <h2 className="text-3xl font-black leading-tight md:text-5xl">
-                Extra | 系隊介紹
+                Bonus 02 | 系隊介紹
               </h2>
 
               <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">

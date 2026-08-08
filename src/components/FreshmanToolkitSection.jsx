@@ -29,11 +29,11 @@ function FreshmanToolkitSection() {
         <div className="motion-reveal rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
             <BookOpenCheck size={18} />
-            Extra
+            Guide 01
           </p>
 
           <h2 className="text-3xl font-black leading-tight md:text-5xl">
-            Extra | 新生實用工具包
+            Guide 01 | 新生實用工具包
           </h2>
 
           <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">

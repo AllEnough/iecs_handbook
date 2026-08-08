@@ -85,11 +85,11 @@ function ScheduleSection() {
           <div className="max-w-3xl">
             <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#dff0ff] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
               <Star size={18} />
-              Extra
+              Bonus 01
             </p>
 
             <h2 className="text-3xl font-black leading-tight md:text-5xl">
-              Extra | 活動與福利
+              Bonus 01 | 活動與福利
             </h2>
           </div>
 

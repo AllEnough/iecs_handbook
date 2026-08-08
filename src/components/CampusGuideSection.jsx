@@ -58,11 +58,11 @@ function CampusGuideSection() {
             <div>
               <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-white px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
                 <Sparkles size={18} />
-                Extra
+                Guide 03
               </p>
 
               <h2 className="text-3xl font-black leading-tight md:text-5xl">
-                Extra | 逢甲小知識
+                Guide 03 | 逢甲小知識
               </h2>
 
               <p className="mt-5 text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">

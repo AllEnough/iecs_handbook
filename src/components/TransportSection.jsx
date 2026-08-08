@@ -7,11 +7,11 @@ function TransportSection() {
         <div className="motion-reveal rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[8px_8px_0_#18181b] md:p-8">
           <p className="mb-4 inline-flex items-center gap-2 border-2 border-zinc-950 bg-[#ffe993] px-3 py-2 text-sm font-black shadow-[3px_3px_0_#18181b]">
             <Compass size={18} />
-            Guide
+            Guide 02
           </p>
 
           <h2 className="text-3xl font-black leading-tight md:text-5xl">
-            如何抵達逢甲
+            Guide 02 | 如何抵達逢甲
           </h2>
 
           <div className="mt-8 grid gap-8 md:grid-cols-2">

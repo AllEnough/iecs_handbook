@@ -154,19 +154,25 @@ function App() {
                 <a href="#camp" className="transition hover:text-blue-600 hover:underline">Mission 02 | 解鎖迎新宿營</a>
               </li>
               <li>
-                <a href="#fee" className="transition hover:text-blue-600 hover:underline">Mission 03 | 系會費</a>
+                <a href="#fee" className="transition hover:text-blue-600 hover:underline">Mission 03 | 系會費與會員福利</a>
               </li>
               <li>
                 <a href="#contact" className="transition hover:text-blue-600 hover:underline">Final Mission | 聯絡我們</a>
               </li>
               <li>
-                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Extra | 活動與福利</a>
+                <a href="#schedule" className="transition hover:text-blue-600 hover:underline">Bonus 01 | 活動與福利</a>
               </li>
               <li>
-                <a href="#sports-team" className="transition hover:text-blue-600 hover:underline">Extra | 系隊介紹</a>
+                <a href="#sports-team" className="transition hover:text-blue-600 hover:underline">Bonus 02 | 系隊介紹</a>
               </li>
               <li>
-                <a href="#freshman-toolkit" className="transition hover:text-blue-600 hover:underline">Extra | 新生實用工具包</a>
+                <a href="#freshman-toolkit" className="transition hover:text-blue-600 hover:underline">Guide 01 | 新生實用工具包</a>
+              </li>
+              <li>
+                <a href="#transport" className="transition hover:text-blue-600 hover:underline">Guide 02 | 如何抵達逢甲</a>
+              </li>
+              <li>
+                <a href="#campus-guide" className="transition hover:text-blue-600 hover:underline">Guide 03 | 逢甲小知識</a>
               </li>
             </ul>
           </div>
