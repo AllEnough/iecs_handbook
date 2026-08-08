@@ -30,20 +30,17 @@ const teamPhotos = [
   {
     src: volleyballChampion,
     alt: '逢甲資工系男排比賽得獎合照',
-    className: 'md:col-span-2',
-    imageClassName: 'aspect-video',
+    imageClassName: 'object-center',
   },
   {
     src: volleyballOuting,
     alt: '逢甲資工系排出遊合照',
-    className: '',
-    imageClassName: 'aspect-[4/5]',
+    imageClassName: 'object-bottom',
   },
   {
     src: volleyballGathering,
     alt: '逢甲資工系排聚會大合照',
-    className: '',
-    imageClassName: 'aspect-[4/5] md:aspect-[4/3]',
+    imageClassName: 'object-center',
   },
 ]
 
@@ -104,17 +101,17 @@ function SportsTeamSection() {
               </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-3 lg:grid-rows-3">
               {teamPhotos.map((photo) => (
                 <figure
                   key={photo.alt}
-                  className={`photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b] ${photo.className}`}
+                  className="photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b]"
                 >
                   <img
                     src={photo.src}
                     alt={photo.alt}
                     loading="lazy"
-                    className={`${photo.imageClassName} h-full w-full object-cover`}
+                    className={`aspect-[16/9] h-full w-full object-cover ${photo.imageClassName}`}
                   />
                 </figure>
               ))}
