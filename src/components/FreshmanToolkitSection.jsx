@@ -1,6 +1,4 @@
 import { Bike, BookOpenCheck, Bus, CalendarDays, ExternalLink, MapPinned } from 'lucide-react'
-import fuxingDormYouBike from '../assets/handbook/fuxing-dorm-youbike.jpg'
-import fcuCampusYouBike from '../assets/handbook/fcu-campus-youbike.jpg'
 
 const courseSteps = [
   '至 MyFCU 逢甲人資訊服務入口登入 NID。',
@@ -24,19 +22,6 @@ const academicDates = [
   { label: '期末統籌考', date: '12/28（一）- 12/29（二）' },
 ]
 
-const youBikeStations = [
-  {
-    title: '福星宿舍附近站點',
-    image: fuxingDormYouBike,
-    alt: '福星宿舍附近 YouBike 站點地圖',
-  },
-  {
-    title: '學校附近站點',
-    image: fcuCampusYouBike,
-    alt: '逢甲大學附近 YouBike 站點地圖',
-  },
-]
-
 function FreshmanToolkitSection() {
   return (
     <section id="freshman-toolkit" className="scroll-mt-28 px-5 py-14 md:px-8">
@@ -55,12 +40,24 @@ function FreshmanToolkitSection() {
             這裡整理入學初期最容易用到的選課、行事曆與福星宿舍往返學校資訊。實際日期、路線與公告仍請以學校官方資訊為準。
           </p>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-[1.45fr_0.85fr]">
+          <div className="mt-8">
             <article className="lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
-              <h3 className="flex items-center gap-2 text-2xl font-black">
-                <CalendarDays size={26} />
-                選課與課表
-              </h3>
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <h3 className="flex items-center gap-2 text-2xl font-black">
+                  <CalendarDays size={26} />
+                  選課與課表
+                </h3>
+
+                <a
+                  href="https://service825.fcu.edu.tw/infofiles/F_0holq1m0eea7af34fd5.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pressable inline-flex items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-white px-4 py-3 text-sm font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#ffe993] hover:shadow-[4px_4px_0_#18181b]"
+                >
+                  選課行事曆 PDF
+                  <ExternalLink size={16} />
+                </a>
+              </div>
 
               <div className="mt-5 space-y-5">
                 <div className="grid gap-4 rounded-md border-2 border-zinc-950 bg-[#fff8e8] p-4 md:grid-cols-[1fr_auto] md:items-start">
@@ -112,27 +109,6 @@ function FreshmanToolkitSection() {
                 </div>
               </div>
             </article>
-
-            <article className="lift-card flex flex-col rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
-              <h3 className="flex items-center gap-2 text-2xl font-black">
-                <CalendarDays size={26} />
-                選課行事曆
-              </h3>
-
-              <p className="mt-4 text-base font-bold leading-8 text-zinc-800">
-                學校選課行事曆會列出查詢課表、加退選、結果公告等時程。若網站資訊與官方 PDF 不同，請以官方公告為準。
-              </p>
-
-              <a
-                href="https://service825.fcu.edu.tw/infofiles/F_0holq1m0eea7af34fd5.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b]"
-              >
-                查看選課行事曆 PDF
-                <ExternalLink size={18} />
-              </a>
-            </article>
           </div>
 
           <div className="mt-5 grid gap-5 lg:grid-cols-2">
@@ -164,7 +140,7 @@ function FreshmanToolkitSection() {
                 rel="noopener noreferrer"
                 className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
               >
-                查看官方行事曆 PDF
+                查看逢甲大學115學年度行事曆 PDF
                 <ExternalLink size={18} />
               </a>
             </article>
@@ -206,28 +182,9 @@ function FreshmanToolkitSection() {
                     YouBike
                   </p>
                   <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
-                    約 7 分鐘。可參考下方福星宿舍與學校附近的 YouBike 站點位置。
+                    約 7 分鐘。可搭配上方導航地圖確認路線與附近站點。
                   </p>
                 </div>
-              </div>
-
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                {youBikeStations.map((station) => (
-                  <figure
-                    key={station.title}
-                    className="overflow-hidden rounded-lg border-2 border-zinc-950 bg-white shadow-[3px_3px_0_#18181b]"
-                  >
-                    <img
-                      src={station.image}
-                      alt={station.alt}
-                      loading="lazy"
-                      className="aspect-[4/3] w-full object-cover"
-                    />
-                    <figcaption className="border-t-2 border-zinc-950 bg-[#fff8e8] p-3 text-center text-sm font-black">
-                      {station.title}
-                    </figcaption>
-                  </figure>
-                ))}
               </div>
 
               <a
