@@ -31,19 +31,16 @@ const teamPhotos = [
     src: volleyballChampion,
     alt: '逢甲資工系男排比賽得獎合照',
     caption: '比賽與團隊榮耀',
-    imageClassName: 'aspect-video',
   },
   {
     src: volleyballOuting,
     alt: '逢甲資工系排出遊合照',
     caption: '球場外的聚會與出遊',
-    imageClassName: 'aspect-video',
   },
   {
     src: volleyballGathering,
     alt: '逢甲資工系排聚會大合照',
     caption: '一起聚會、認識更多朋友',
-    imageClassName: 'aspect-video',
   },
 ]
 
@@ -104,7 +101,7 @@ function SportsTeamSection() {
               </div>
             </div>
 
-            <div className="grid gap-4 lg:mt-20">
+            <div className="grid gap-3 lg:mt-20">
               {teamPhotos.map((photo) => (
                 <figure
                   key={photo.caption}
@@ -114,9 +111,9 @@ function SportsTeamSection() {
                     src={photo.src}
                     alt={photo.alt}
                     loading="lazy"
-                    className={`${photo.imageClassName} h-full w-full object-cover`}
+                    className="h-[170px] w-full object-cover md:h-[150px]"
                   />
-                  <figcaption className="flex items-center gap-2 border-t-4 border-zinc-950 bg-[#ffe993] p-3 text-sm font-black">
+                  <figcaption className="flex items-center gap-2 border-t-4 border-zinc-950 bg-[#ffe993] p-2 text-sm font-black">
                     <Camera size={18} />
                     {photo.caption}
                   </figcaption>
