@@ -35,7 +35,7 @@ const teamPhotos = [
   {
     src: volleyballOuting,
     alt: '逢甲資工系排出遊合照',
-    imageClassName: 'object-bottom',
+    imageClassName: 'object-[center_78%]',
   },
   {
     src: volleyballGathering,
