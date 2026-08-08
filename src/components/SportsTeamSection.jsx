@@ -4,6 +4,8 @@ import basketballTeam from '../assets/handbook/basketball-team.jpg'
 import volleyballOuting from '../assets/handbook/volleyball-outing.jpg'
 import volleyballChampion from '../assets/handbook/volleyball-champion.jpg'
 import volleyballGathering from '../assets/handbook/volleyball-gathering.jpg'
+import womensVolleyballChampion from '../assets/handbook/womens-volleyball-champion.jpg'
+import womensVolleyballPractice from '../assets/handbook/womens-volleyball-practice.jpg'
 
 const teamHighlights = [
   {
@@ -56,6 +58,21 @@ const basketballPhotos = [
     src: basketballGame,
     alt: '逢甲資工系籃比賽合照',
     imageClassName: 'object-center',
+  },
+]
+
+const womensVolleyballPhotos = [
+  {
+    src: womensVolleyballChampion,
+    alt: '逢甲資工系女排比賽得獎合照',
+    className: '',
+    imageClassName: 'aspect-[16/9] object-center',
+  },
+  {
+    src: womensVolleyballPractice,
+    alt: '逢甲資工系女排球場練習合照',
+    className: '',
+    imageClassName: 'aspect-[4/5] object-[center_72%]',
   },
 ]
 
@@ -130,6 +147,38 @@ function SportsTeamSection() {
                   />
                 </figure>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-10 border-t-4 border-zinc-950 pt-8">
+            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+              <div>
+                <div className="rounded-lg border-4 border-zinc-950 bg-[#e8f4ff] p-5 shadow-[5px_5px_0_#18181b]">
+                  <h3 className="flex items-center gap-2 text-2xl font-black">
+                    <UsersRound size={26} />
+                    逢甲資工系女排
+                  </h3>
+                  <p className="mt-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
+                    不想大學四年只有寫程式和統籌考嗎？歡迎加入資工系排！在這裡，我們不只是一支球隊，更是你在大學最強的後盾。不管你以前有沒有碰過排球，球隊裡有耐心的學長姐從零開始手把手帶你練起；也有迎新、送舊、友誼賽等例行活動，學長姐們還可以為各位在課業、教授評價到校園宵夜推薦上給予極大的建議，讓大家迅速適應大學生活。歡迎大家加入資工系排～
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid gap-3">
+                {womensVolleyballPhotos.map((photo) => (
+                  <figure
+                    key={photo.alt}
+                    className={`photo-frame overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b] ${photo.className}`}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className={`${photo.imageClassName} h-full w-full object-cover`}
+                    />
+                  </figure>
+                ))}
+              </div>
             </div>
           </div>
 
