@@ -1,6 +1,8 @@
-import { AtSign, Dumbbell, HeartHandshake, Trophy, UsersRound } from 'lucide-react'
-import basketballGame from '../assets/handbook/basketball-game.jpg'
-import basketballTeam from '../assets/handbook/basketball-team.jpg'
+import { AtSign, Dumbbell, HeartHandshake, QrCode, Trophy, UsersRound } from 'lucide-react'
+import basketballBigTeam from '../assets/handbook/basketball-big-team.jpg'
+import basketballLineQr from '../assets/handbook/basketball-line-qr.png'
+import basketballTeamPortrait from '../assets/handbook/basketball-team-portrait.jpg'
+import basketballWelcome from '../assets/handbook/basketball-welcome.jpg'
 import volleyballOuting from '../assets/handbook/volleyball-outing.jpg'
 import volleyballChampion from '../assets/handbook/volleyball-champion.jpg'
 import volleyballGathering from '../assets/handbook/volleyball-gathering.jpg'
@@ -50,13 +52,18 @@ const teamPhotos = [
 
 const basketballPhotos = [
   {
-    src: basketballTeam,
-    alt: '逢甲資工系籃活動大合照',
+    src: basketballWelcome,
+    alt: '逢甲資訊系籃迎新活動合照',
     imageClassName: 'object-center',
   },
   {
-    src: basketballGame,
-    alt: '逢甲資工系籃比賽合照',
+    src: basketballTeamPortrait,
+    alt: '逢甲資訊系籃隊員合照',
+    imageClassName: 'object-center',
+  },
+  {
+    src: basketballBigTeam,
+    alt: '逢甲資訊系籃大合照',
     imageClassName: 'object-center',
   },
 ]
@@ -70,7 +77,7 @@ const basketballHighlights = [
   {
     icon: Trophy,
     title: '比賽培養默契',
-    desc: '代表資訊系參加系際盃、院際盃等比賽，一起享受熱血時刻。',
+    desc: '代表資訊系參加系際盃、大資盃等比賽，一起享受熱血時刻。',
   },
   {
     icon: HeartHandshake,
@@ -262,7 +269,7 @@ function SportsTeamSection() {
                   <div className="mt-4 space-y-4 text-base font-bold leading-8 text-zinc-800 md:text-lg md:leading-9">
                     <p>大學生活不只在教室，也可以在球場上留下屬於自己的回憶！</p>
                     <p>
-                      資訊系籃是一群因為喜歡籃球而聚在一起的人。平常我們一起練球、切磋球技，也會代表資訊系參加系際盃、院際盃等比賽。不用擔心自己不夠強，只要你喜歡籃球、想打球，或想找一群能一起流汗、一起進步的朋友，都歡迎加入資訊系籃。
+                      資訊系籃是一群因為喜歡籃球而聚在一起的人。平常我們一起練球、切磋球技，也會代表資訊系參加系際盃、大資盃等比賽。不用擔心自己不夠強，只要你喜歡籃球、想打球，或想找一群能一起流汗、一起進步的朋友，都歡迎加入資訊系籃。
                     </p>
                   </div>
                   <a
@@ -274,6 +281,24 @@ function SportsTeamSection() {
                     <AtSign size={18} />
                     系籃 IG：@fcu_iecs.bb
                   </a>
+
+                  <div className="mt-5 flex flex-col gap-4 rounded-md border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] sm:flex-row sm:items-center">
+                    <img
+                      src={basketballLineQr}
+                      alt="資訊系籃 LINE 群組 QR Code"
+                      loading="lazy"
+                      className="mx-auto h-28 w-28 shrink-0 rounded-md border-2 border-zinc-950 bg-white object-contain sm:mx-0"
+                    />
+                    <div>
+                      <h4 className="flex items-center gap-2 text-lg font-black">
+                        <QrCode size={22} />
+                        系籃 LINE 群組
+                      </h4>
+                      <p className="mt-2 text-sm font-bold leading-7 text-zinc-700">
+                        想了解練球、招新與活動資訊，可以掃描 QR Code 加入群組。
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-5 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -298,7 +323,7 @@ function SportsTeamSection() {
                 </div>
               </div>
 
-              <div className="grid gap-3">
+              <div className="grid gap-3 lg:grid-rows-3">
                 {basketballPhotos.map((photo) => (
                   <figure
                     key={photo.alt}
