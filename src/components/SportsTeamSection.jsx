@@ -12,6 +12,8 @@ import womensVolleyballPractice from '../assets/handbook/womens-volleyball-pract
 
 const volleyballLineUrl =
   'https://line.me/ti/g2/82MLum5GR8dTchxdD9rDCFQwF3B84LnVd_tUSw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'
+const basketballLineUrl =
+  'https://line.me/ti/g2/82MLum5GR8dTchxdD9rDCFQwF3B84LnVd_tUSw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'
 
 const teamHighlights = [
   {
@@ -135,14 +137,17 @@ function VolleyballLineCard() {
         src={volleyballLineQr}
         alt="資訊系排 LINE 社群 QR Code"
         loading="lazy"
-        className="mx-auto h-28 w-28 shrink-0 rounded-md border-2 border-zinc-950 bg-white object-contain sm:mx-0"
+        className="hidden h-28 w-28 shrink-0 rounded-md border-2 border-zinc-950 bg-white object-contain sm:block"
       />
       <div>
         <h4 className="flex items-center gap-2 text-lg font-black">
           <QrCode size={22} />
           系排 LINE 社群
         </h4>
-        <p className="mt-2 text-sm font-bold leading-7 text-zinc-700">
+        <p className="mt-2 text-sm font-bold leading-7 text-zinc-700 sm:hidden">
+          想了解練球、招新與活動資訊，可以點擊此卡加入社群。
+        </p>
+        <p className="mt-2 hidden text-sm font-bold leading-7 text-zinc-700 sm:block">
           想了解練球、招新與活動資訊，可以掃描 QR Code 或點擊此卡加入社群。
         </p>
       </div>
@@ -315,23 +320,31 @@ function SportsTeamSection() {
                     系籃 IG：@fcu_iecs.bb
                   </a>
 
-                  <div className="mt-5 flex flex-col gap-4 rounded-md border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] sm:flex-row sm:items-center">
+                  <a
+                    href={basketballLineUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pressable mt-5 flex flex-col gap-4 rounded-md border-2 border-zinc-950 bg-white p-4 shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-[#fff8e8] hover:shadow-[4px_4px_0_#18181b] sm:flex-row sm:items-center"
+                  >
                     <img
                       src={basketballLineQr}
                       alt="資訊系籃 LINE 群組 QR Code"
                       loading="lazy"
-                      className="mx-auto h-28 w-28 shrink-0 rounded-md border-2 border-zinc-950 bg-white object-contain sm:mx-0"
+                      className="hidden h-28 w-28 shrink-0 rounded-md border-2 border-zinc-950 bg-white object-contain sm:block"
                     />
                     <div>
                       <h4 className="flex items-center gap-2 text-lg font-black">
                         <QrCode size={22} />
                         系籃 LINE 群組
                       </h4>
-                      <p className="mt-2 text-sm font-bold leading-7 text-zinc-700">
-                        想了解練球、招新與活動資訊，可以掃描 QR Code 加入群組。
+                      <p className="mt-2 text-sm font-bold leading-7 text-zinc-700 sm:hidden">
+                        想了解練球、招新與活動資訊，可以點擊此卡加入群組。
+                      </p>
+                      <p className="mt-2 hidden text-sm font-bold leading-7 text-zinc-700 sm:block">
+                        想了解練球、招新與活動資訊，可以掃描 QR Code 或點擊此卡加入群組。
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div className="mt-5 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
