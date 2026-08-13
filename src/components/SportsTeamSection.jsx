@@ -13,7 +13,7 @@ import womensVolleyballPractice from '../assets/handbook/womens-volleyball-pract
 const volleyballLineUrl =
   'https://line.me/ti/g2/82MLum5GR8dTchxdD9rDCFQwF3B84LnVd_tUSw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'
 const basketballLineUrl =
-  'https://line.me/ti/g/B36ZpptW24'
+  'https://line.me/ti/g2/9QuFGBKQbHw1E3DzxaS8hyyY-kAUQ31fbKIRQQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'
 
 const teamHighlights = [
   {
