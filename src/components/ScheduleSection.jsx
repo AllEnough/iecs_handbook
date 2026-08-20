@@ -75,14 +75,16 @@ const activityPhotos = [
     alt: '新鮮人成長營活動合照',
     title: '新鮮人成長營',
     note: '新生入學前的重要活動，先認識同學、學長姐與校園生活。',
-    position: 'object-[center_58%]',
+    frameClass: 'aspect-video max-h-[360px] md:aspect-[16/5]',
+    imageClass: 'object-cover object-[center_58%]',
   },
   {
     src: christmasPartyPhoto,
     alt: '耶誕晚會活動大合照',
     title: '耶誕晚會',
     note: '在課業之外一起相聚、放鬆，也留下屬於資訊系的活動回憶。',
-    position: 'object-[center_78%]',
+    frameClass: 'aspect-[7/3] max-h-[360px]',
+    imageClass: 'object-cover object-center',
   },
 ]
 
@@ -144,7 +146,7 @@ function ScheduleSection() {
               <img
                 src={currentActivityPhoto.src}
                 alt={currentActivityPhoto.alt}
-                className={`aspect-video max-h-[360px] w-full object-cover md:aspect-[16/5] ${currentActivityPhoto.position}`}
+                className={`w-full ${currentActivityPhoto.frameClass} ${currentActivityPhoto.imageClass}`}
               />
 
               <button
@@ -166,20 +168,8 @@ function ScheduleSection() {
               </button>
             </div>
 
-            <div className="flex flex-col gap-3 border-t-4 border-zinc-950 bg-[#ffe993] p-4 md:flex-row md:items-center md:justify-between">
-              <div>
-                <p className="text-sm font-black text-blue-600">
-                  活動照片 {activityPhotoIndex + 1} / {activityPhotos.length}
-                </p>
-                <h3 className="mt-1 text-2xl font-black">
-                  {currentActivityPhoto.title}
-                </h3>
-                <p className="mt-2 text-base font-bold leading-7 text-zinc-700">
-                  {currentActivityPhoto.note}
-                </p>
-              </div>
-
-              <div className="flex gap-2">
+            <div className="flex items-center justify-center border-t-4 border-zinc-950 bg-[#ffe993] p-3">
+              <div className="flex gap-2" aria-label="活動照片切換">
                 {activityPhotos.map((photo, index) => (
                   <button
                     key={photo.title}
