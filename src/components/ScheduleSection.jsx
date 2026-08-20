@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CalendarClock, Gift, PartyPopper, Star, Store, X } from 'lucide-react'
+import christmasPartyPhoto from '../assets/handbook/christmas-party.jpg'
 import growthCampPhoto from '../assets/handbook/growth-camp.jpg'
 import infoNightPhoto from '../assets/handbook/info-night.jpg'
 import straightAIpadPoster from '../assets/handbook/straight-a-ipad.jpg'
@@ -159,6 +160,27 @@ function ScheduleSection() {
                   </article>
                 )
               })}
+            </div>
+          </div>
+
+          <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-sm font-black text-blue-600">活動現場</p>
+                <h3 className="mt-1 text-2xl font-black">耶誕晚會回顧</h3>
+              </div>
+              <p className="max-w-2xl text-base font-bold leading-8 text-zinc-700">
+                系學會也會舉辦像耶誕晚會這樣的大型活動，讓大家在課業之外也能一起相聚、放鬆和留下回憶。
+              </p>
+            </div>
+
+            <div className="photo-frame mt-5 overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
+              <img
+                src={christmasPartyPhoto}
+                alt="耶誕晚會活動大合照"
+                loading="lazy"
+                className="aspect-[16/9] w-full object-cover object-[center_78%] md:aspect-[21/9]"
+              />
             </div>
           </div>
 
