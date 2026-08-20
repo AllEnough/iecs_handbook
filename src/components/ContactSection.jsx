@@ -1,5 +1,6 @@
 import { AtSign, Building2, Code, ExternalLink, Globe2, HelpCircle, MapPin, Rocket, UserRound } from 'lucide-react'
 import fcuIecsQr from '../assets/handbook/fcu-iecs-qr.png'
+import fcuiecsIgQr from '../assets/handbook/fcuiecs-ig-qr.png'
 
 const contacts = [
   {
@@ -21,6 +22,7 @@ const contacts = [
     href: 'https://instagram.com/fcu_iecs',
     subDetail: '辦公室：逢甲大學資訊電機館 B30',
     qr: fcuIecsQr,
+    qrAlt: 'FCU_IECS 系學會 Instagram QR Code',
     hideExternalIcon: true,
   },
   {
@@ -28,7 +30,14 @@ const contacts = [
     title: '資訊工程學系系網',
     detail: '前往系網',
     href: 'https://www.iecs.fcu.edu.tw/',
+    extraLink: {
+      detail: 'ig：@fcuiecs',
+      href: 'https://www.instagram.com/fcuiecs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+      hideExternalIcon: true,
+    },
     subDetail: '課程、師資、系辦公告與系所資訊，可以到系網查看。',
+    qr: fcuiecsIgQr,
+    qrAlt: 'FCUIECS 系上 Instagram QR Code',
   },
 ]
 
@@ -101,12 +110,23 @@ function ContactSection() {
                             {contact.subDetail}
                           </p>
                         )}
+                        {contact.extraLink && (
+                          <a
+                            href={contact.extraLink.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="pressable mt-2 inline-flex items-center gap-2 text-base font-bold leading-7 text-blue-600 transition hover:underline"
+                          >
+                            {contact.extraLink.detail}
+                            {!contact.extraLink.hideExternalIcon && <ExternalLink size={16} />}
+                          </a>
+                        )}
                       </div>
                     </div>
                     {contact.qr && (
                       <img
                         src={contact.qr}
-                        alt="FCU_IECS 系學會 Instagram QR Code"
+                        alt={contact.qrAlt}
                         className="hidden w-28 shrink-0 self-start rounded-md border-2 border-zinc-950 bg-white sm:block"
                       />
                     )}
