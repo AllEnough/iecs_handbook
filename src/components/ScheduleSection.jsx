@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react'
-import { CalendarClock, Gift, PartyPopper, Star, Store, X } from 'lucide-react'
+import {
+  CalendarClock,
+  ChevronLeft,
+  ChevronRight,
+  Gift,
+  PartyPopper,
+  Star,
+  Store,
+  X,
+} from 'lucide-react'
 import christmasPartyPhoto from '../assets/handbook/christmas-party.jpg'
 import growthCampPhoto from '../assets/handbook/growth-camp.jpg'
 import infoNightPhoto from '../assets/handbook/info-night.jpg'
@@ -60,11 +69,41 @@ const straightAPosters = [
   },
 ]
 
+const activityPhotos = [
+  {
+    src: growthCampPhoto,
+    alt: '新鮮人成長營活動合照',
+    title: '新鮮人成長營',
+    note: '新生入學前的重要活動，先認識同學、學長姐與校園生活。',
+    position: 'object-[center_58%]',
+  },
+  {
+    src: christmasPartyPhoto,
+    alt: '耶誕晚會活動大合照',
+    title: '耶誕晚會',
+    note: '在課業之外一起相聚、放鬆，也留下屬於資訊系的活動回憶。',
+    position: 'object-[center_78%]',
+  },
+]
+
 function ScheduleSection() {
   const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false)
+  const [activityPhotoIndex, setActivityPhotoIndex] = useState(0)
   const regularEventCount = events.filter((event) => !event.image).length
+  const currentActivityPhoto = activityPhotos[activityPhotoIndex]
 
   const closeSponsorModal = () => setIsSponsorModalOpen(false)
+  const showPreviousActivityPhoto = () => {
+    setActivityPhotoIndex(
+      (currentIndex) =>
+        (currentIndex - 1 + activityPhotos.length) % activityPhotos.length,
+    )
+  }
+  const showNextActivityPhoto = () => {
+    setActivityPhotoIndex(
+      (currentIndex) => (currentIndex + 1) % activityPhotos.length,
+    )
+  }
 
   useEffect(() => {
     if (!isSponsorModalOpen) return undefined
@@ -101,11 +140,64 @@ function ScheduleSection() {
           </div>
 
           <div className="photo-frame mt-8 overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[5px_5px_0_#18181b]">
-            <img
-              src={growthCampPhoto}
-              alt="新鮮人成長營活動合照"
-              className="aspect-video max-h-[360px] w-full object-cover object-[center_58%] md:aspect-[16/5]"
-            />
+            <div className="relative">
+              <img
+                src={currentActivityPhoto.src}
+                alt={currentActivityPhoto.alt}
+                className={`aspect-video max-h-[360px] w-full object-cover md:aspect-[16/5] ${currentActivityPhoto.position}`}
+              />
+
+              <button
+                type="button"
+                onClick={showPreviousActivityPhoto}
+                aria-label="查看上一張活動照片"
+                className="pressable absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border-2 border-zinc-950 bg-white/95 shadow-[3px_3px_0_#18181b] transition hover:bg-[#ffe993]"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              <button
+                type="button"
+                onClick={showNextActivityPhoto}
+                aria-label="查看下一張活動照片"
+                className="pressable absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border-2 border-zinc-950 bg-white/95 shadow-[3px_3px_0_#18181b] transition hover:bg-[#ffe993]"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-3 border-t-4 border-zinc-950 bg-[#ffe993] p-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p className="text-sm font-black text-blue-600">
+                  活動照片 {activityPhotoIndex + 1} / {activityPhotos.length}
+                </p>
+                <h3 className="mt-1 text-2xl font-black">
+                  {currentActivityPhoto.title}
+                </h3>
+                <p className="mt-2 text-base font-bold leading-7 text-zinc-700">
+                  {currentActivityPhoto.note}
+                </p>
+              </div>
+
+              <div className="flex gap-2">
+                {activityPhotos.map((photo, index) => (
+                  <button
+                    key={photo.title}
+                    type="button"
+                    onClick={() => setActivityPhotoIndex(index)}
+                    aria-label={`查看${photo.title}照片`}
+                    aria-current={
+                      index === activityPhotoIndex ? 'true' : undefined
+                    }
+                    className={`h-3 w-8 rounded-full border-2 border-zinc-950 transition ${
+                      index === activityPhotoIndex
+                        ? 'bg-blue-600'
+                        : 'bg-white hover:bg-[#dff0ff]'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="mt-8 rounded-lg border-4 border-zinc-950 bg-[#f8fbff] p-5 shadow-[5px_5px_0_#18181b]">
@@ -160,27 +252,6 @@ function ScheduleSection() {
                   </article>
                 )
               })}
-            </div>
-          </div>
-
-          <div className="mt-6 rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
-            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="text-sm font-black text-blue-600">活動現場</p>
-                <h3 className="mt-1 text-2xl font-black">耶誕晚會回顧</h3>
-              </div>
-              <p className="max-w-2xl text-base font-bold leading-8 text-zinc-700">
-                系學會也會舉辦像耶誕晚會這樣的大型活動，讓大家在課業之外也能一起相聚、放鬆和留下回憶。
-              </p>
-            </div>
-
-            <div className="photo-frame mt-5 overflow-hidden rounded-lg border-4 border-zinc-950 bg-white shadow-[4px_4px_0_#18181b]">
-              <img
-                src={christmasPartyPhoto}
-                alt="耶誕晚會活動大合照"
-                loading="lazy"
-                className="aspect-[16/9] w-full object-cover object-[center_78%] md:aspect-[21/9]"
-              />
             </div>
           </div>
 
