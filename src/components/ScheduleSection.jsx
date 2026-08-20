@@ -153,18 +153,18 @@ function ScheduleSection() {
                 type="button"
                 onClick={showPreviousActivityPhoto}
                 aria-label="查看上一張活動照片"
-                className="pressable absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border-2 border-zinc-950 bg-white/95 shadow-[3px_3px_0_#18181b] transition hover:bg-[#ffe993]"
+                className="pressable absolute left-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full border-2 border-zinc-950 bg-white/90 shadow-[2px_2px_0_#18181b] transition hover:bg-[#ffe993] md:left-3 md:h-11 md:w-11 md:bg-white/95 md:shadow-[3px_3px_0_#18181b]"
               >
-                <ChevronLeft size={24} />
+                <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
               </button>
 
               <button
                 type="button"
                 onClick={showNextActivityPhoto}
                 aria-label="查看下一張活動照片"
-                className="pressable absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border-2 border-zinc-950 bg-white/95 shadow-[3px_3px_0_#18181b] transition hover:bg-[#ffe993]"
+                className="pressable absolute right-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full border-2 border-zinc-950 bg-white/90 shadow-[2px_2px_0_#18181b] transition hover:bg-[#ffe993] md:right-3 md:h-11 md:w-11 md:bg-white/95 md:shadow-[3px_3px_0_#18181b]"
               >
-                <ChevronRight size={24} />
+                <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
               </button>
             </div>
 
