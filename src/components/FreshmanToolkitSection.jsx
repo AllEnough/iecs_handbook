@@ -37,7 +37,7 @@ function FreshmanToolkitSection() {
           </h2>
 
           <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-zinc-800 md:text-lg md:leading-9">
-            這裡整理入學初期最容易用到的選課、行事曆與福星宿舍往返學校資訊。實際日期、路線與公告仍請以學校官方資訊為準。
+            這裡整理入學初期最容易用到的選課、行事曆、必選修科目表與福星宿舍往返學校資訊。實際日期、路線與公告仍請以學校官方資訊為準。
           </p>
 
           <div className="mt-8">
@@ -146,6 +146,43 @@ function FreshmanToolkitSection() {
             </article>
 
             <article className="lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b]">
+              <h3 className="flex items-center gap-2 text-2xl font-black">
+                <BookOpenCheck size={26} />
+                115 學年度必選修科目表
+              </h3>
+
+              <p className="mt-4 text-base font-bold leading-8 text-zinc-800">
+                這份表格適用於 115 學年度入學新生，整理資訊系大一到大四的必修、核心、選修課程與畢業學分規定。
+              </p>
+
+              <div className="mt-5 grid gap-3">
+                <div className="rounded-md border-2 border-zinc-950 bg-[#f8fbff] p-4 shadow-[3px_3px_0_#18181b]">
+                  <p className="text-base font-black">可以先看什麼？</p>
+                  <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
+                    想先了解四年大概會修哪些課、畢業總學分是多少，或未來選修方向，可以從這份 PDF 開始看。
+                  </p>
+                </div>
+
+                <div className="rounded-md border-2 border-zinc-950 bg-[#ffe993] p-4 shadow-[3px_3px_0_#18181b]">
+                  <p className="text-base font-black">新生提醒</p>
+                  <p className="mt-2 text-sm font-bold leading-6 text-zinc-800">
+                    大一必修多數會由系統安排進課表，實際修課仍請以系上公告與選課系統為準。
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.iecs.fcu.edu.tw/media/img/ckeditor/2026/08/18/115_bachelor_new.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pressable mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-zinc-950 bg-[#ffe993] px-4 py-3 text-base font-black shadow-[3px_3px_0_#18181b] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[4px_4px_0_#18181b] sm:w-auto"
+              >
+                查看必選修科目表 PDF
+                <ExternalLink size={18} />
+              </a>
+            </article>
+
+            <article className="lift-card rounded-lg border-4 border-zinc-950 bg-white p-5 shadow-[5px_5px_0_#18181b] lg:col-span-2">
               <h3 className="flex items-center gap-2 text-2xl font-black">
                 <MapPinned size={26} />
                 福星宿舍如何到學校
